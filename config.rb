@@ -25,6 +25,13 @@ set :images_dir, 'assets/images'
 activate :directory_indexes
 activate :livereload
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote   = 'publish'
+  deploy.branch   = 'master'
+  deploy.build_before = true
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
