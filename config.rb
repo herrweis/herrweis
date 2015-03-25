@@ -1,21 +1,30 @@
-helpers do
-  def sub_pages(dir)
-    sitemap.resources.select do |resource|
-      resource.path.start_with?(dir)
-    end
-  end
-end
-
 require 'compass'
 # Change Compass configuration
 compass_config do |config|
   config.output_style = :expanded
-  config.sass_options = {:debug_info => true}
+  config.sass_options = {:debug_info => false}
+end
+
+helpers do
+  def inline_css(source)
+    file     = asset_path(:css, source)
+    resource = sitemap.find_resource_by_destination_path(file)
+    css      = resource.render
+
+    # Code smell: Inappropriate intimacy
+    if extensions[:minify_css]
+      compressor = config[:css_compressor] || extensions[:minify_css].options[:compressor] || ::Middleman::Extensions::MinifyCss::SassCompressor
+      css        = compressor.compress(css)
+    end
+
+    "<style type='text/css'>#{css}</style>"
+  end
 end
  
 require 'slim'
 # Slim::Engine.set_default_options :pretty => false
 
+Slim::Engine.disable_option_validator!
 set :slim, :layout_engine => :slim
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -23,20 +32,29 @@ set :images_dir, 'assets/images'
 
 
 activate :directory_indexes
-activate :livereload
+
+configure :development do
+  activate :livereload
+end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.remote   = 'publish'
+  deploy.remote   = 'git@github.com:herrweis/herrweis.github.io.git'
   deploy.branch   = 'master'
   deploy.build_before = true
 end
 
-# Build-specific configuration
+
+
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
+
+  activate :gzip do |gzip|
+  gzip.exts = %w(.js .css .svg)
+  end
+
+  activate :imageoptim
   activate :relative_assets
   set :relative_links, true
 end
