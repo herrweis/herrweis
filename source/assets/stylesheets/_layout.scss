@@ -1,124 +1,77 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-image: url("assets/images/workspace.jpg");
-  background-position: center;
-  background-size: cover;
-  color: $white;
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 1.00em;
-  line-height: 1.7;
-  padding-left: 1.000em;
-  padding-right: 1.000em;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 1.00em;
-  -ms-text-size-adjust: 1.00em;
+  padding: 0 6%;
 
-  @media screen and (min-height: 600px) {
-    & {
-      font-size: 1.25em;
-      -webkit-text-size-adjust: 1.25em;
-      -ms-text-size-adjust: 1.25em;
-    }
+  @media screen and (min-width: 35rem) {
+    padding-left: 14%;
   }
 }
 
-a {
-  color: currentColor;
-  font-style: italic;
+.logo {
+  display: block;
+  position: absolute;
+  top: 5.5rem;
+  width: 2.5rem;
 }
 
-main {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
+.sayhi {
+  @include transform(rotate(90deg));
 
-article {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-h1 {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  font-size: 0.800em;
-  letter-spacing: 0.100em;
-  margin-bottom: 0;
-  margin-top: 0;
-  text-align: center;
-  text-transform: uppercase;
-  transition: margin-top 0.3s;
-
-  @media screen and (min-height: 600px) {
-    & {
-      margin-top: -1.000em;
-    }
-  }
-
-  @media screen and (min-height: 800px) {
-    & {
-      margin-top: -7.000em;
-    }
-  }
-
-  svg {
-    display: inline-block;
-    height: 5.000em;
-    margin-bottom: 1.000em;
-    transition: all 0.3s;
-    width: 5.000em;
-
-    @media screen and (min-height: 600px) {
-      & {
-        height: 8.000em;
-        width: 8.000em;
-      }
-    }
-  }
-}
-
-p {
-  border-bottom: 1px solid currentColor;
-  border-top: 1px solid currentColor;
-  margin-bottom: 3.000em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3.000em;
-  max-width: 31.500em;
-  padding-bottom: 1.500em;
-  padding-top: 1.500em;
-  text-align: center;
-}
-
-nav {
-  text-align: center;
+  font-family: $ff-sans;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  right: -4rem;
+  text-transform: lowercase;
+  top: 5.5rem;
+  position: absolute;
 
   a {
-    border-radius: 3px;
-    display: inline-block;
-    height: 2.000em;
-    line-height: 2.000em;
-    margin-left: 1.000em;
-    margin-right: 1.000em;
-    transition: all 0.3s; 
-    width: 2.000em;
-
-    svg {
-      height: 1.250em;
-      vertical-align: middle;
-      width: 1.250em;
-    }
-
-    &:hover {
-      background-color: rgba(0, 255, 255, 0.2);
-    }
+    display: block;
+    text-decoration: none;
   }
 }
 
-.hidden {
-  display: none;
+.next {
+  bottom: 3rem;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.03rem;
+  position: absolute;
+
+  @include fluid-type($screen-minW, $screen-maxW, $mod_1/1.2 * 1rem, $mod_2/1.15 * 1rem);
+
+  &:after,
+  &::after {
+    content: '\2193';
+    display: block;
+    font-family: $ff-sans;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+header {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+
+  h1 {
+    margin-top: -3em;
+
+    span {
+      color: $color-highlight;
+      font-family: $ff-serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+  }
+
+  p {
+    @media screen and (min-width: 35rem) {
+      margin-left: -1.8em;
+    }
+  }
 }

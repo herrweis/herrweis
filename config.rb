@@ -20,7 +20,7 @@ helpers do
     "<style type='text/css'>#{css}</style>"
   end
 end
- 
+
 require 'slim'
 # Slim::Engine.set_default_options :pretty => false
 
@@ -38,13 +38,16 @@ configure :development do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.remote   = 'git@github.com:herrweis/herrweis.github.io.git'
-  deploy.branch   = 'master'
+  # deploy.method = :git
+  # deploy.remote   = 'git@github.com:herrweis/herrweis.github.io.git'
+  # deploy.branch   = 'master'
+  deploy.method   = :ftp
+  deploy.host            = 'andreasweis.com'
+  deploy.path            = 'portfolio2016'
+  deploy.user            = 'andreasweis'
+  deploy.password        = 'F%hCD53;'
   deploy.build_before = true
 end
-
-
 
 configure :build do
   activate :minify_css
@@ -57,4 +60,13 @@ configure :build do
   activate :imageoptim
   activate :relative_assets
   set :relative_links, true
+end
+
+
+# disable layout
+page ".htaccess.apache", :layout => false
+
+# rename file after build
+after_build do
+  File.rename 'build/.htaccess.apache', 'build/.htaccess'
 end
