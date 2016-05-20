@@ -1,16 +1,67 @@
+@keyframes dash {
+  to {
+    stroke-dashoffset: 80;
+  }
+}
+
 body {
+  margin: 0;
   padding: 0 6%;
 
-  @media screen and (min-width: 35rem) {
-    padding-left: 14%;
+  @include breakpoint(small) {
+    padding: 0 0 0 14%;
   }
+}
+
+.hidden {
+  display: none;
 }
 
 .logo {
   display: block;
+  margin-left: -0.2rem;
   position: absolute;
-  top: 5.5rem;
-  width: 2.5rem;
+  top: 9%;
+  width: 3rem;
+
+  path {
+    stroke: $color-black;
+  }
+
+  polyline {
+    stroke: transparent;
+    stroke-width: 0;
+    fill: transparent;
+  }
+}
+
+.work-icon,
+.cv-icon {
+  display: block;
+  position: absolute;
+  top: 5%;
+  width: 3rem;
+
+  line,
+  rect,
+  polyline,
+  polygon,
+  path {
+    fill: transparent;
+    stroke: $color-black;
+    stroke-dasharray: 210;
+    stroke-width: 2;
+  }
+}
+
+.cv-icon {
+  left: 0;
+  margin-left: -0.2rem;
+  top: 0;
+  
+  @include breakpoint(small) {
+    top: 3.2%;
+  }
 }
 
 .sayhi {
@@ -35,6 +86,7 @@ body {
   bottom: 3rem;
   font-size: 1rem;
   font-style: italic;
+  left: 0;
   letter-spacing: 0.03rem;
   position: absolute;
 
@@ -53,25 +105,69 @@ body {
 }
 
 header {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: flex-start;
+  @include flexbox((
+    display: box,
+    align-items: center,
+    justify-content: flex-start
+  ), $version: 1);
+  @include flexbox((
+    display: flexbox,
+    align-items: center,
+    justify-content: flex-start
+  ), $version: 2);
+  @include flexbox((
+    display: flex,
+    align-items: center,
+    justify-content: flex-start
+  ));
+  min-height: 100vh;
+  position: relative;
 
   h1 {
-    margin-top: -3em;
+    margin-top: -2em;
 
     span {
       color: $color-highlight;
       font-family: $ff-serif;
-      font-size: 1.2em;
+      font-size: 1.16em;
       font-style: italic;
     }
   }
 
   p {
-    @media screen and (min-width: 35rem) {
+    @include breakpoint(small) {
       margin-left: -1.8em;
     }
   }
+
+  nav {
+    display: block;
+    padding-top: 2em;
+    text-align: left;
+
+    a {
+      color: $color-black;
+      display: inline-block;
+      padding: 0.5em 1.0em 0.5em 0;
+
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+
+    svg {
+      fill: currentColor;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    @include breakpoint(small) {
+      padding-top: 0;
+      text-align: left;
+    }
+  }
+}
+
+section {
+  display: none;
 }
