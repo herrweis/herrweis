@@ -12,23 +12,23 @@ section.worklisting
     #workpreview-canvas.workpreview-canvas
   ul
     li
-      a href="#" data-preview-bg="#{image_path("worklist_bg_design_system.jpg")}"
+      = link_to '01_uom_designsystem', data: { :'preview-bg' => image_path("worklist_bg_design_system.jpg") } do
         h2 web.unimelb
         p.predashed A digital design system for The University of Melbourne.
     li
-      a href="#" data-preview-bg="#{image_path("worklist_bg_shakespeare.jpg")}"
-        h2 shakespeare400
-        p.predashed Taking the bard to the digital stage
-    li
-      a href="#" data-preview-bg="#{image_path("worklist_bg_pursuit.jpg")}"
+      = link_to '02_pursuit', data: { :'preview-bg' => image_path("worklist_bg_pursuit.jpg") } do
         h2 pursuit
         p.predashed Cutting-edge Research News and Expert Commentary
     li
-      a href="#" data-preview-bg="#{image_path("worklist_bg_webfontblender.png")}"
+      = link_to '03_shakespeare400', data: { :'preview-bg' => image_path("worklist_bg_shakespeare.jpg") } do
+        h2 shakespeare400
+        p.predashed Taking the bard to the digital stage
+    li
+      = link_to '04_webfontblender', data: { :'preview-bg' => image_path("worklist_bg_webfontblender.png") } do
         h2 webfontblender
         p.predashed A tool to checkout neat google font combinations
     li
-      a href="#" data-preview-bg="#{image_path("worklist_bg_meinl.jpg")}"
+      = link_to '05_meinlcymbals', data: { :'preview-bg' => image_path("worklist_bg_meinl.jpg") } do
         h2 meinlcymbals
         p.predashed Every drummer’s dream job
   .next 9data-105p="transform: translateY(0%)" data-125p="transform: translateY(1000%); opacity: 1; display: block;" data-135p="opacity: 0; display: none;"  curriculum vitae
