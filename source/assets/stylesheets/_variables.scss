@@ -4,16 +4,23 @@
 $mod_1: 1.10;
 $mod_2: 1.333;
 
+$mod_3: 1.0;
+$mod_4: 1.6;
+
 $screen-minW: 36rem;
 $screen-maxW: 150rem;
 
 $ff-serif: "Times New Roman", serif;
-$ff-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $ff-serif: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$ff-sans: Arial, sans-serif;
 
 $color-black: #000000;
 $color-white: #FFFFFF;
-$color-highlight: #0027FF;
-$color-green: #00E3B4;
+$color-highlight: #4b32f0;
+$color-green: #f64051;
+$color-lightGrey: #f4f4f4;
+
+$color-ferocia: #3d3369;
 
 
 @function strip-unit($value) {
@@ -65,4 +72,31 @@ $color-green: #00E3B4;
       }
     }
   }
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@include keyframes(no-anim) {
+
+}
+
+@mixin animation ($stuff ) {
+  -webkit-animation: $stuff;
+  -moz-animation: $stuff;
+  -ms-animation: $stuff;
+  animation: $stuff;
 }

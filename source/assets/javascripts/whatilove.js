@@ -11,12 +11,14 @@ function shuffle(array) {
 }
 
 function whatILove() {
-  this.words = ['develop', 'program', 'create', 'play', 'explore', 'cook', 'eat'];
-  shuffle(this.words);
-  this.words.push('design');
-  this.current = 0;
   this.el = document.getElementById('whatilove');
-  window.setTimeout(this.changeWord.bind(this), 1000);
+  if(this.el) {
+    this.words = ['develop', 'program', 'create', 'play', 'explore', 'cook', 'eat'];
+    shuffle(this.words);
+    this.words.push('design');
+    this.current = 0;
+    window.setTimeout(this.changeWord.bind(this), 2500);
+  }
 }
 
 whatILove.prototype.changeWord = function() {
@@ -39,4 +41,5 @@ whatILove.prototype.endChange = function() {
   this.el.classList.add('end-change');
   window.setTimeout(this.changeWord.bind(this), 1000);
 }
+
 var whatILove = new whatILove();

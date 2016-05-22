@@ -16,27 +16,27 @@ h6 {
 }
 
 h1 {
-  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
 }
 
 h2 {
-  font-size: $mod_1*$mod_1*$mod_1 *1rem
+  font-size: $mod_1*$mod_1*$mod_1 *1rem;
 }
 
 h3 {
-  font-size: $mod_1*$mod_1 *1rem
+  font-size: $mod_1*$mod_1 *1rem;
 }
 
 h4 {
-  font-size: $mod_1 *1rem
+  font-size: $mod_1 *1rem;
 }
 
 h5 {
-  font-size: 1rem
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 1/$mod_1 *1rem
+  font-size: 1/$mod_1 *1rem;
 }
 
 h1 {
@@ -81,7 +81,7 @@ li {
 p.predashed {
   font-size: 1rem;
   font-style: italic;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.08rem;
 
   &:before,
   &::before {

@@ -1,29 +1,3 @@
-@mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-ms-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
-@include keyframes(no-anim) {
-
-}
-
-@mixin animation ($stuff ) {
-  -webkit-animation: $stuff;
-  -moz-animation: $stuff;
-  -ms-animation: $stuff;
-  animation: $stuff;
-}
-
 @include keyframes(dropout) {
   0% {
     @include transform(translateY(0%));

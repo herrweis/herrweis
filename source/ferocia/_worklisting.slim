@@ -1,0 +1,34 @@
+section.worklisting
+  svg.work-icon viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="title"
+    line stroke-miterlimit="10" x1="36" y1="34" x2="41" y2="39" data-50p="stroke-dashoffset: 210;" data-80p="stroke-dashoffset: 0;"
+    rect x="46.257" y="35.065" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 120.5036 47.0858)" stroke-miterlimit="10" width="8.485" height="26.87" data-50p="stroke-dashoffset: 210;" data-80p="stroke-dashoffset: 0;"
+    polygon stroke-miterlimit="10" points="12,16 18,10 8,4 6,6 " data-50p="stroke-dashoffset: 210;" data-80p="stroke-dashoffset: 0;"
+    line stroke-miterlimit="10" x1="28" y1="26" x2="15" y2="13" data-50p="stroke-dashoffset: 210;" data-80p="stroke-dashoffset: 0;"
+    path stroke-miterlimit="10" d="M58,12.5l-8,3.75l-4-4.125l3.5-8.062l0,0 C39.5,4.062,37,9,37,14v4L3.5,52l-1.75,6l2.125,2l6.062-1.5L44,25h4C53,25,58,22.5,58,12.5L58,12.5z" data-50p="stroke-dashoffset: 210;" data-80p="stroke-dashoffset: 0;"
+  .workpreview
+    svg.cross role="img" viewBox="0 0 902 902"
+      path d="M1.5,1.5 L900.5,900.5" data-80p="stroke-dashoffset: 2000;" data-100p="stroke-dashoffset: 0;"
+      path d="M900.5,1.5 L1.5,900.5" data-90p="stroke-dashoffset: 2000;" data-100p="stroke-dashoffset: 0;"
+    #workpreview-canvas.workpreview-canvas
+  ul
+    li
+      = link_to '01_uom_designsystem', data: { :'preview-bg' => image_path("worklist_bg_design_system.jpg") } do
+        h2 web.unimelb
+        p.predashed A digital design system for The University of Melbourne.
+    li
+      = link_to '02_pursuit', data: { :'preview-bg' => image_path("worklist_bg_pursuit.jpg") } do
+        h2 pursuit
+        p.predashed Cutting-edge Research News and Expert Commentary
+    li
+      = link_to '03_shakespeare400', data: { :'preview-bg' => image_path("worklist_bg_shakespeare.jpg") } do
+        h2 shakespeare400
+        p.predashed Taking the bard to the digital stage
+    li
+      = link_to '04_webfontblender', data: { :'preview-bg' => image_path("worklist_bg_webfontblender.png") } do
+        h2 webfontblender
+        p.predashed A tool to checkout neat google font combinations
+    li
+      = link_to '05_meinlcymbals', data: { :'preview-bg' => image_path("worklist_bg_meinl.jpg") } do
+        h2 meinlcymbals
+        p.predashed Every drummer’s dream job
+  .next 9data-105p="transform: translateY(0%)" data-125p="transform: translateY(1000%); opacity: 1; display: block;" data-135p="opacity: 0; display: none;"  curriculum vitae

@@ -1,0 +1,410 @@
+article {
+  .two-cols,
+  .one-col {
+    margin: 7% auto;
+    width: 94%;
+
+    h2 {
+      letter-spacing: 0.3em;
+      margin-bottom: 0.8em;
+      max-width: 33rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-style: italic;
+      letter-spacing: 0.08rem;
+      max-width: 34rem;
+
+      @include fluid-type($screen-minW, $screen-maxW, $mod_1/1.1 * 1rem, $mod_2/1.1 * 1rem);
+    }
+
+    & + .two-cols {
+      margin-top: 12%;
+    }
+
+    .col {
+      &.pursuit-wireframe-text {
+        h2 {
+          margin-top: -5rem;
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      @include flexbox((
+        display: box,
+        align-items: center,
+        justify-content: flex-start,
+        flex-direction: row
+      ), $version: 1);
+      @include flexbox((
+        display: flexbox,
+        align-items: center,
+        justify-content: flex-start,
+        flex-direction: row
+      ), $version: 2);
+      @include flexbox((
+        display: flex,
+        align-items: center,
+        justify-content: flex-start,
+        flex-direction: row
+      ));
+      width: 100%;
+
+      &.text-left {
+        .col.text {
+          @include flexbox((
+            display: box,
+            flex-direction: column,
+            align-items: flex-end
+          ), $version: 1);
+          @include flexbox((
+            display: flexbox,
+            flex-direction: column,
+            align-items: flex-end
+          ), $version: 2);
+          @include flexbox((
+            display: flex,
+            flex-direction: column,
+            align-items: flex-end
+          ));
+          padding: 0 2rem 0 2rem;
+        }
+      }
+
+      .col {
+        box-sizing: border-box;
+        width: 50%;
+
+        img {
+          display: block;
+        }
+
+        &.image:first-child {
+          padding: 0 1rem 0 1.5rem;
+        }
+
+        &.image:last-child {
+          padding: 0 3rem 0 0;
+
+          &.intext img {
+            margin-left: -5rem;
+            position: relative;
+            z-index: -1;
+          }
+        }
+
+        &.text {
+          padding: 0 2rem 0 0;
+        }
+
+        &.pursuit-wireframe-text {
+          h2 {
+            margin-top: -12rem;
+          }
+        }
+      }
+
+      p.withdash,
+      h2 + p {
+        text-indent: -0.8em;
+
+        &:before,
+        &::before {
+          display: inline-block;
+          content: '— ';
+          color: $color-highlight;
+          font-family: $ff-sans;
+          font-size: 1.2em;
+          font-weight: bold;
+          line-height: 0;
+          width: 0.7em;
+        }
+      }
+
+      p.withdash {
+        padding-top: 8rem;
+      }
+
+      @include breakpoint(small) {
+        .text-wrap + .image {
+          margin-left: -2rem;
+          padding: 6% 6% 0 0;
+        }
+      }
+    }
+
+    .col.bleed-left {
+      padding: 3% 0 10% 0;
+
+      &.uom-menubar img{
+        box-shadow: 0 0 0.5rem rgba($color-black, 0.3);
+        display: block;
+        width: 100%;
+      }
+
+      &.meinlhomepage {
+        @include transform(translateX(-2rem));
+        display: block;
+        padding-bottom: 0;
+        width: 100%;
+      }
+
+      @include breakpoint(small) {
+        padding: 5% 0 5% 0;
+
+        &.uom-menubar {
+          padding-right: 5%;
+        }
+
+        &.pursuit-wireframe {
+          margin-bottom: -7rem;
+          padding-top: 10%;
+          padding-bottom: 0;
+
+          img{
+            left: -6%;
+            max-width: 104%;
+            position: relative;
+            width: 104%;
+          }
+        }
+      }
+    }
+
+    .col.bleed-right {
+      .uom-macbook-bleed {
+        max-width: 150%;
+        position: relative;
+        right: -10%;
+        width: 140%;
+      }
+    }
+  }
+
+  .bleed {
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+
+      &.uom-oboto {
+        @include transform(translateX(3%));
+        max-width: 400%;
+        width: 400%;
+      }
+    }
+
+    &.bleed-right {
+      text-align: right;
+    }
+
+    @include breakpoint(small) {
+      padding: 4% 0;
+
+      img.uom-roboto {
+        @include transform(translateX(25%));
+        width: 110%;
+      }
+    }
+  }
+
+  .center-image {
+    text-align: center;
+
+    @include breakpoint(small) {
+      & + .two-cols {
+        margin-top: 2%;
+      }
+
+      img {
+        margin: 0 auto;
+        max-width: 80%;
+      }
+    }
+
+    &.grey-backdrop {
+      background-color: $color-lightGrey;
+      overflow: hidden;
+      padding: 7% 3% 0 3%;
+
+      img {
+        margin-bottom: -0.5rem;
+      }
+
+      @include breakpoint(small) {
+        padding: 7% 0 0 0;
+      }
+    }
+
+    &.with-shadow {
+      padding: 7% 0 0 0;
+
+      img {
+        box-shadow: 0 0 0.5rem rgba($color-black, 0.3);
+      }
+    }
+  }
+
+  .videbg {
+    video {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  footer {
+    p {
+      padding: 3% 0;
+      text-align: center;
+
+      a {
+        color: $color-highlight;
+        font-family: $ff-sans;
+        font-size: $mod_1*$mod_1*$mod_1 *1rem;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+
+        @include fluid-type($screen-minW, $screen-maxW, $mod_1*$mod_1*$mod_1 *1rem, $mod_2*$mod_2*$mod_2 *1rem);
+      }
+    }
+  }
+
+  .uom-color {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+
+    @include breakpoint(small) {
+      width: 57%;
+    }
+  }
+
+  .uom-macbook-wrapper {
+    @include flexbox((
+      display: box,
+      align-items: center,
+      justify-content: flex-start,
+      flex-direction: row
+    ), $version: 1);
+    @include flexbox((
+      display: flexbox,
+      align-items: center,
+      justify-content: flex-start,
+      flex-direction: row
+    ), $version: 2);
+    @include flexbox((
+      display: flex,
+      align-items: center,
+      justify-content: flex-start,
+      flex-direction: row
+    ));
+
+    margin: 0 0 0 -15%;
+    padding: 6% 0;
+    width: 130%;
+
+    .uom-macbook-image-wrapper {
+      @include flexbox((
+        flex: 1 0 0
+      ), $version: 1);
+      @include flexbox((
+        flex: 1 0 0
+      ), $version: 2);
+      @include flexbox((
+        flex: 1 0 0
+      ));
+
+      display: block;
+    }
+  }
+
+  .unimelb-device-special {
+    min-height: 50%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    position: relative;
+
+    img {
+      left: -36%;
+      position: absolute;
+      top: -2%;
+      width: 100%;
+    }
+
+    ul {
+      background-color: #F2F5F8;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      color: #004478;
+      font-size: 2*$mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+      margin: 0;
+      padding: 0.5em 0.5em 0.5em 0;
+      text-align: right;
+
+      @include fluid-type($screen-minW, $screen-maxW, 2*$mod_1*$mod_1*$mod_1*$mod_1 *1rem, 2*$mod_2*$mod_2*$mod_2*$mod_2 *1rem);
+
+      .number {
+        // font-size: 2*$mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+        font-style: italic;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+
+        // @include fluid-type($screen-minW, $screen-maxW, 2*$mod_1*$mod_1*$mod_1*$mod_1 *1rem, 2*$mod_2*$mod_2*$mod_2*$mod_2 *1rem);
+      }
+
+      .label {
+        font-size: 1rem;
+        font-family: $ff-sans;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        margin: 0;
+        padding: 0;
+
+        @include fluid-type($screen-minW, $screen-maxW, 1rem, 1.4*1rem);
+      }
+
+    }
+
+    @include breakpoint(small) {
+      img {
+        left: -20%;
+      }
+
+      li {
+        padding-right: 1em;
+      }
+    }
+  }
+
+  .one-col {
+    display: block;
+    padding-top: 7%;
+
+    .align-center {
+      margin: 0 auto 7% auto;
+      max-width: 34rem;
+    }
+
+    &.notopmargin {
+      margin-top: -7%;
+    }
+  }
+
+  .grey-backdrop {
+    background-color: $color-lightGrey;
+  }
+
+  img.center {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

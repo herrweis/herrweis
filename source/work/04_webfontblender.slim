@@ -1,0 +1,60 @@
+---
+layout: layout_work
+title: "Introducing the Webfontblender"
+---
+
+nav.top
+  ul
+    li
+      = link_to '03', '03_shakespeare400'
+    li
+      = link_to '/ferocia' do
+        svg.logo-header viewBox="0 0 42.9 38.8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="title" data-30p="display: block;" data-40p="display: none;"
+          title Logo of Andreas Weis
+          path d="M25.9,32.6c0.2,0.3,0.5,0.4,0.9,0.4c0.3,0,0.6-0.1,0.8-0.3c0.5-0.5,0.5-1.3,0.1-1.9c-0.3-0.4-1.1-1.4-2.3-2.7 C20.3,22.3,8.7,8.5,8,7.8c-0.6-0.6-1.4-1-2.1-1C5.5,6.8,5.2,6.9,4.9,7C4,7.4,3.5,8.4,3.5,9.6v20.8c0,1,0.5,1.8,1.3,2.2 c0.3,0.1,0.6,0.2,1,0.2c0.8,0,1.6-0.4,2.2-1c0,0,0,0,0.1,0l6.8-5.4c0.5-0.5,0.5-1.3,0.1-1.9C14.7,24.2,14.4,24,14,24 c-0.3,0-0.5,0.1-0.8,0.3c0,0,0,0,0,0l-6.6,5.2c-0.1,0.1-0.2,0.1-0.3,0.1c-0.1,0-0.2,0-0.3-0.1c-0.2-0.1-0.3-0.3-0.3-0.5V10.4 c0-0.2,0.2-0.4,0.4-0.5c0.1,0,0.1,0,0.2,0c0.1,0,0.3,0.1,0.4,0.2L25.9,32.6z"
+          path d="M16.9,7.2c-0.2-0.3-0.5-0.4-0.9-0.4c-0.3,0-0.6,0.1-0.8,0.3c-0.5,0.5-0.5,1.3-0.1,1.9 c2,2.4,18.8,22.1,19.6,23.1c0.6,0.6,1.4,1,2.2,1c0.3,0,0.7-0.1,1-0.2c0.9-0.4,1.5-1.4,1.5-2.6V9.5c0-1-0.5-1.8-1.3-2.1 c-0.3-0.1-0.7-0.2-1-0.2c-0.8,0-1.7,0.4-2.2,1c0,0,0,0-0.1,0L28,13.6c-0.5,0.5-0.6,1.3-0.1,1.9c0.2,0.3,0.5,0.4,0.9,0.4 c0.3,0,0.5-0.1,0.8-0.3c0,0,0,0,0,0l6.6-5.2c0.1-0.1,0.2-0.1,0.3-0.1c0.1,0,0.2,0,0.2,0.1c0.2,0.1,0.3,0.3,0.3,0.5v18.7 c0,0.2-0.1,0.4-0.3,0.5c-0.1,0-0.1,0-0.2,0c-0.1,0-0.3-0.1-0.4-0.2L16.9,7.2z"
+    li
+      = link_to '05', '05_meinlcymbals'
+
+article.webfontblender
+  header
+    h1 Webfontblender
+    p A little tool to checkout neat google webfont combinations. Open Source (of course)
+
+
+  .intro style="background-image: url(#{image_path("04_header_bg.svg")});"
+    img src="#{image_path("04_header.png")}" alt="Picture of the webfontblender website"
+
+  .two-cols.text-right
+    .col.image
+      img src="#{image_path("04_scribble.jpg")}" alt="Scribble of the app"
+    .col.text.pursuit-wireframe-text
+      h2 Blend that font!
+      p Although pages like The Web Font Combinator and PXtoEM already exist, I felt the need for a tool that combines functions I personally use almost every day. I then came up with the Web Font Blender.
+
+  .two-cols.text-left
+    .col.text
+      .text-wrap
+        h2 Quick and easy viewing of Google webfonts
+        p Check the readability, rendering and look of google web font combinations directly in the browser. Compare different combinations simply by clicking.
+    .col.bleed-right
+      img.uom-macbook-bleed src="#{image_path("04_selecting_fonts.jpg")}" alt="Screenshot of a homepage"
+
+  .one-col.grey-backdrop.notopmargin
+    .align-center
+      h2 Grab the code
+      p In the code section the user can copy the needed google embedding code as well as the configured font sizes directly.
+    img.center src="#{image_path("04_code.jpg")}" alt="Screenshot of the code selection"
+
+  footer
+    p
+      a href="http://webfontblender.com" visit webfontblender.com
+
+nav.bottom
+  ul
+    li
+      = link_to '03', '03_shakespeare400'
+    li
+      = link_to 'Home', '/ferocia'
+    li
+      = link_to '05', '05_meinlcymbals'

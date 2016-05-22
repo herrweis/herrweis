@@ -21,4 +21,7 @@ function initSkrollr() {
     skrollrInstance.destroy();
   }
 }
-initSkrollr();
+
+if(!document.querySelector('body.fullwidth')) {
+  initSkrollr();
+}

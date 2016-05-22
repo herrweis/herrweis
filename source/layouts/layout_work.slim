@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    link rel="shortcut icon" href="/favicon.ico" type="image/x-icon; charset=binary"
+    link rel="icon" href="/favicon.ico" type="image/x-icon; charset=binary"
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta content="IE=edge" http-equiv="X-UA-Compatible"
+    title = current_page.data.title || "Andreas Weis — Web design and development"
+
+    /[if lt IE 9]
+      script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"
+
+    = inline_css "workinline"
+
+  body.fullwidth
+    == yield
+
+    == partial :svg
+
+    noscript#deferred-styles
+      == stylesheet_link_tag "workmain"
+    javascript:
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+
+    == javascript_include_tag 'all', :async => true
+    / javascript:
+    /   var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-18291047-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
