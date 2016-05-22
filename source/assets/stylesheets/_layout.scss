@@ -1,5 +1,27 @@
+.sr {
+  .logo,
+  nav.top,
+  header h1,
+  header p,
+  .next,
+  .workpreview,
+  .worklisting li,
+  article .intro,
+  .two-cols h2,
+  .two-cols p,
+  .uom-macbook-image-wrapper img {
+    visibility: hidden;
+  }
+}
+
+body.fadeout {
+  opacity: 0;
+}
+
 body {
+  @include transition(opacity 0.3s ease-in-out);
   margin: 0;
+  opacity: 1;
   padding: 0 6%;
 
   @include breakpoint(small) {
@@ -140,33 +162,6 @@ header.start {
     height: 1.2em;
     margin-top: -0.2em;
     vertical-align: middle;
-  }
-
-  nav {
-    display: none;
-    padding-top: 2em;
-    text-align: left;
-
-    a {
-      color: $color-black;
-      display: inline-block;
-      padding: 0.5em 1.0em 0.5em 0;
-
-      &:hover {
-        color: $color-highlight;
-      }
-    }
-
-    svg {
-      fill: currentColor;
-      height: 1.5rem;
-      width: 1.5rem;
-    }
-
-    @include breakpoint(small) {
-      padding-top: 0;
-      text-align: left;
-    }
   }
 }
 

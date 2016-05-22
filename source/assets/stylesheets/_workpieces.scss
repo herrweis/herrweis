@@ -1,4 +1,6 @@
 article {
+  overflow: hidden;
+  
   .two-cols,
   .one-col {
     margin: 7% auto;
@@ -174,6 +176,8 @@ article {
     }
 
     .col.bleed-right {
+      overflow: hidden;
+
       .uom-macbook-bleed {
         max-width: 150%;
         position: relative;

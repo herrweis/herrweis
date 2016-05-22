@@ -13,7 +13,7 @@ function shuffle(array) {
 function whatILove() {
   this.el = document.getElementById('whatilove');
   if(this.el) {
-    this.words = ['develop', 'program', 'create', 'play', 'explore', 'cook', 'eat'];
+    this.words = ['develop', 'program', 'create', 'play', 'explore', 'cook', 'eat', 'code'];
     shuffle(this.words);
     this.words.push('design');
     this.current = 0;

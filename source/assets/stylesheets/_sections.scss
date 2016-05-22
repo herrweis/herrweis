@@ -92,6 +92,62 @@ section {
   }
 }
 
+nav.contact {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 4em;
+  text-align: center;
+
+  &:before,
+  &::before,
+  &:after,
+  &::after {
+    color: $color-highlight;
+    content: '—';
+    display: block;
+    font-family: $ff-sans;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0 auto 2em auto;
+  }
+
+  &:after,
+  &::after {
+    margin: 2em auto 0 auto;
+  }
+
+  a {
+    color: $color-black;
+    display: inline-block;
+    padding: 0.5em 1em 0.5em 1em;
+
+    &:hover {
+      color: $color-highlight;
+    }
+  }
+
+  svg {
+    fill: currentColor;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  @include breakpoint(small) {
+    padding-right: 14%;
+    padding-top: 7%;
+
+    &:before,
+    &::before {
+      margin: 0 auto 7% auto;
+    }
+
+    &:after,
+    &::after {
+      margin: 7% auto 0 auto;
+    }
+  }
+}
+
 
 .cv {
   padding-top: 4rem;
@@ -204,7 +260,7 @@ section {
   }
 
   @include breakpoint(small) {
-    padding: 15% 5% 0 4rem;
+    padding: 7% 5% 0 4rem;
 
     article {
       .sidebar {

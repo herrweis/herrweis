@@ -37,8 +37,8 @@ configure :development do
   activate :livereload
 end
 
-ignore 'assets/videos/*'
-ignore 'assets/images/*'
+# ignore 'assets/videos/*'
+# ignore 'assets/images/*'
 
 activate :deploy do |deploy|
   # deploy.method = :git
