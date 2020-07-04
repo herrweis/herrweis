@@ -1,1 +1,0 @@
-for(var allLinks=document.querySelectorAll("nav.top a, nav.bottom a, .worklisting a"),bodyElement=document.querySelector("body"),i=0;i<allLinks.length;i++){var href=allLinks[i].href;allLinks[i].addEventListener("click",function(e){e.preventDefault();var t=this.href;bodyElement.classList.add("fadeout"),window.setTimeout(function(){document.location=t},300)})}

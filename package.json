@@ -1,0 +1,29 @@
+{
+  "name": "herrweis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herrweis/the666.git"
+  },
+  "author": "Andreas Weis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herrweis/the666/issues"
+  },
+  "homepage": "https://github.com/herrweis/the666#readme",
+  "dependencies": {
+    "gatsby": "^2.23.11",
+    "gatsby-plugin-manifest": "^2.4.17",
+    "gatsby-plugin-react-helmet": "^3.3.9",
+    "gatsby-plugin-sass": "^2.3.6",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
+  },
+  "description": ""
+}
