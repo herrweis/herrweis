@@ -19,5 +19,12 @@ module.exports = {
         icon: "src/images/favicon.png",
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://andreasweis.com',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
   ],
 }

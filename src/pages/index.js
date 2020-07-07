@@ -10,8 +10,10 @@ export default function Home() {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Andreas Weis — product design and frontend development</title>
+        <title>Andreas Weis | Product Design and Frontend Development</title>
+        <meta name="description" content="Personal website of Andreas Weis"/>
         <link rel="canonical" href="https://andreasweis.com" />
+        <html lang="en" />
       </Helmet>
       <h1>Andreas Weis</h1>
       <p>
