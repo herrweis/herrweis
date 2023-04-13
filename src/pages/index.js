@@ -1,25 +1,14 @@
 import React from "react"
-import { Helmet } from "react-helmet"
-import { getColorPair } from "../components/getColors"
+
+import setBodyColors from "../components/setBodyColors"
 // import Humanize from "../components/humanize"
 // let getAJobText = "I have been designing and developing digital and physical things for over <Humanize number={(new Date().getFullYear() - 2002)} /> years."
 
-const [colorA, colorB] = getColorPair();
+setBodyColors();
 
-export default function Home() {
-
+export default function Page() {
   return (
-    <div className="wrapper">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Andreas Weis | Product Design Leader</title>
-        <meta name="description" content="Personal website of Andreas Weis"/>
-        <link rel="canonical" href="https://andreasweis.com" />
-        <html lang="en" />
-        <style>{`
-          body { background-color: ${colorA}; color: ${colorB}; }
-        `}</style>
-      </Helmet>
+    <div className="wrapper" onClick={setBodyColors}>
       <div className="box">
         <div className="box1">
           <div className="box2">
@@ -27,7 +16,7 @@ export default function Home() {
             <h2>Head of Design, Melbourne</h2>
             <p>
               I help businesses design human centred and easy-to-use products.
-              <br />
+            </p><p>  
               Currently for <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>. Previously at <a href="//up.com.au" aria-label="Go to Up's website">Up</a>, <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">University of Melbourne</a> and other places.
             </p>
             <nav>
@@ -45,5 +34,17 @@ export default function Home() {
         </div>
       </div>
     </div>
+  )
+}
+
+export function Head() {
+  return (
+      <>
+          <meta charSet="utf-8" />
+          <title>Andreas Weis | Product Design Leader</title>
+          <meta name="description" content="Personal website of Andreas Weis"/>
+          <link rel="canonical" href="https://andreasweis.com" />
+          <html lang="en" />
+      </>
   )
 }

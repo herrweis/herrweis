@@ -1,14 +1,22 @@
-$defaultFontSize: calc(22px + (50 - 22) * ((100vw - 50px) / (1980 - 50)));
+$defaultFontSize: calc(22px + (40 - 22) * ((100vw - 50px) / (1980 - 40)));
+:root {
+  --bodyColor: black;
+  --backgroundColor: white;
+}
 
 html {
   font-size: $defaultFontSize;
   height: 100%;
+  color: var(--bodyColor);
+  background-color: var(--backgroundColor);
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 body {
   font-size: $defaultFontSize;
-  background-color: white;
-  color: black;
+  color: inherit;
+  background-color: inherit;
+  min-height: 100%;
 
   margin: 0;
   padding: 0;
@@ -23,9 +31,9 @@ div.wrapper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  width: 100vw;
   padding: 1.5rem;
+  min-height: 100vh;
+  width: 100%;
 
   div {
     box-sizing: border-box;
@@ -80,19 +88,30 @@ a {
   color: currentColor;
 
   &:hover {
-    color: currentColor;
+    background-color: var(--bodyColor);
+    color: var(--backgroundColor);
     text-decoration: line-through;
   }
 }
 
 svg {
-  width: 1rem;
+  width: 0.9rem;
   fill: inherit;
 }
 
+nav {
+  display: flex;
+  margin-left: -0.3rem;
+}
+
 nav a {
-  display: inline-block;
-  margin-right: $defaultFontSize;
+  flex: 1;
+  display: flex;
+  padding: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.15rem;
+  margin-right: 0.5rem;
 }
 
 @media screen and (min-width: 600px) {
@@ -121,5 +140,13 @@ nav a {
 
   a {
     color: white;
+  }
+}
+
+
+@supports (-webkit-touch-callout: none) {
+  div.wrapper {
+    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
+    min-height: -webkit-fill-available;
   }
 }
