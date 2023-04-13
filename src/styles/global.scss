@@ -1,4 +1,4 @@
-$defaultFontSize: calc(20px + (50 - 20) * ((100vw - 200px) / (1980 - 200)));
+$defaultFontSize: calc(22px + (50 - 22) * ((100vw - 50px) / (1980 - 50)));
 
 html {
   font-size: $defaultFontSize;
@@ -11,37 +11,82 @@ body {
   color: black;
 
   margin: 0;
-  padding: 0 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  padding: 0;
 
   // font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+div.wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 1.5rem;
+
+  div {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.box2 {
+      align-items: flex-start;
+    }
+  }
+}
+
+div.box {
+  border: 2px solid currentColor;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+div.box1 {
+  border: 0 transparent;
+  padding: 0;
+  flex: 1;
+}
+
+div.box2 {
+  border: 0 transparent;
+  padding: 0;
+  flex: 1;
+}
+
+
 h1 {
   font-size: 1rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 0.7rem;
   font-weight: normal;
+  margin: 0 0 1.5rem 0;
 }
 
 p {
-  margin: 0 0 $defaultFontSize 0;
-  line-height: 1.4;
+  font-size: 0.7rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
 }
 
 a {
-  color: black;
+  color: currentColor;
 
   &:hover {
-    color: #F34A53;
+    color: currentColor;
+    text-decoration: line-through;
   }
 }
 
 svg {
-  width: 0.8rem;
+  width: 1rem;
   fill: inherit;
 }
 
@@ -50,6 +95,23 @@ nav a {
   margin-right: $defaultFontSize;
 }
 
+@media screen and (min-width: 600px) {
+  div.box1 {
+    border: 2px solid currentColor;
+    padding: 1.5rem;
+  }
+
+  svg {
+    width: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  div.box2 {
+    border: 2px solid currentColor;
+    padding: 1.5rem;
+  }
+}
 
 @media (prefers-color-scheme: dark) {
   body {
