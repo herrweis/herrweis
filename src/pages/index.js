@@ -16,8 +16,9 @@ export default function Page() {
             <h2>Head of Design, Melbourne</h2>
             <p>
               I help businesses design human centred and easy-to-use products.
-            </p><p>  
-              Currently for <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>. Previously at <a href="//up.com.au" aria-label="Go to Up's website">Up</a>, <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">University of Melbourne</a> and other places.
+            </p>
+            <p>  
+              Currently for <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>.<br/>Previously at <a href="//up.com.au" aria-label="Go to Up's website">Up</a> and <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">the University of Melbourne</a> amongst other awesome places.
             </p>
             <nav>
               <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">
