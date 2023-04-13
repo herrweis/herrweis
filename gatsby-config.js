@@ -15,6 +15,7 @@ module.exports = {
     siteUrl,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
