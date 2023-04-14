@@ -31,7 +31,7 @@ div.wrapper {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
   min-height: 100vh;
   width: 100%;
 
@@ -50,7 +50,7 @@ div.wrapper {
 
 div.box {
   border: 2px solid currentColor;
-  padding: 1.5rem;
+  padding: 1rem;
   flex: 1;
 }
 
@@ -115,9 +115,15 @@ nav a {
 }
 
 @media screen and (min-width: 600px) {
+  div.wrapper {
+    padding: 1.2rem;
+  }
+  div.box {
+    padding: 1.2rem;
+  }
   div.box1 {
     border: 2px solid currentColor;
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 
   svg {
@@ -126,6 +132,15 @@ nav a {
 }
 
 @media screen and (min-width: 1181px) {
+  div.wrapper {
+    padding: 1.5rem;
+  }
+  div.box {
+    padding: 1.5rem;
+  }
+  div.box1 {
+    padding: 1.5rem;
+  }
   div.box2 {
     border: 2px solid currentColor;
     padding: 1.5rem;
