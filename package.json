@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/herrweis/the666#readme",
   "dependencies": {
-    "gatsby": "^5.8.1",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
