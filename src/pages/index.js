@@ -13,15 +13,15 @@ export default function Page() {
         <div className="box1">
           <div className="box2">
             <h1>Andreas Weis</h1>
-            <h2>Head of Design, Melbourne</h2>
+            <h2>Head of Digital Design, Melbourne</h2>
             <p>
               I help businesses design human centred and easy-to-use products.
             </p>
             <p>  
-              Currently for <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>  where I help Bendigo Bank make their digital banking easy and enjoyable for everyone.
+              Currently for <a href="//bendigobank.com.au" aria-label="Go to Bendigo Bank's website">Bendigo Bank</a> where I am standing up the group's first digital design practice.
             </p>
             <p>
-              Previously at <a href="//up.com.au" aria-label="Go to Up's website">Up</a> and <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">the University of Melbourne</a> amongst other awesome places.
+              Previously at <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>, <a href="//up.com.au" aria-label="Go to Up's website">Up</a> and <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">the University of Melbourne</a> amongst other awesome places.
             </p>
             <nav>
               <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">
