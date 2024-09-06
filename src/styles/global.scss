@@ -3,7 +3,7 @@
   --bodyColor: black;
   --backgroundColor: white;
   --highlightColor: #00E3B4;
-  --defaultFontSize: calc(20px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
+  --defaultFontSize: calc(16px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
 }
 
 html {
@@ -93,7 +93,6 @@ a {
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
-    transform: translateY(0);
   }
 }
 
