@@ -16,17 +16,23 @@
   },
   "homepage": "https://github.com/herrweis/the666#readme",
   "dependencies": {
-    "gatsby": "^5.8.1",
+    "gatsby": "^5.13.7",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sass": "^6.8.0",
+    "gatsby-plugin-sass": "^6.13.1",
     "get-contrast": "^3.0.0",
-    "node-sass": "^8.0.0",
     "random-hex-color": "^1.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0"
+    "react": "^18.3.1",
+    "react-animated-cursor": "^2.11.2",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "sass": "^1.78.0"
   },
-  "description": ""
+  "description": "",
+  "overrides": {
+    "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
+      "react": "^18.2.0"
+    }
+  }
 }

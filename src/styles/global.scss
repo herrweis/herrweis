@@ -1,11 +1,13 @@
-$defaultFontSize: calc(24px + (40 - 24) * ((100vw - 100px) / (1980 - 100)));
+
 :root {
   --bodyColor: black;
   --backgroundColor: white;
+  --highlightColor: #00E3B4;
+  --defaultFontSize: calc(20px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
 }
 
 html {
-  font-size: $defaultFontSize;
+  font-size: var(--defaultFontSize);
   height: 100%;
   color: var(--bodyColor);
   background-color: var(--backgroundColor);
@@ -13,7 +15,7 @@ html {
 }
 
 body {
-  font-size: $defaultFontSize;
+  font-size: var(--defaultFontSize);
   color: inherit;
   background-color: inherit;
   min-height: 100%;
@@ -22,7 +24,8 @@ body {
   padding: 0;
 
   // font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family:"freight-sans-pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 div.wrapper {
@@ -30,138 +33,73 @@ div.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   padding: 1rem;
   min-height: 100vh;
   width: 100%;
-
-  div {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    &.box2 {
-      align-items: flex-start;
-    }
-  }
-}
-
-div.box {
-  border: 2px solid currentColor;
-  padding: 1rem;
-  flex: 1;
-}
-
-div.box1 {
-  border: 0 transparent;
-  padding: 0;
-  flex: 1;
-}
-
-div.box2 {
-  border: 0 transparent;
-  padding: 0;
-  flex: 1;
 }
 
 
 h1 {
-  font-size: 1rem;
-  margin: 0;
+  display: none;
 }
 
-h2 {
-  font-size: 0.7rem;
-  font-weight: normal;
-  margin: 0 0 1.5rem 0;
+.logoWrapper {
+  width: 100%;
+  text-align: left;
 }
 
-p {
-  font-size: 0.7rem;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.5;
+.logo {
+  display: block;
+  height: 1.5rem;
+
+  path {
+    stroke: #000000;
+    stroke-width: 0.2rem;
+    stroke-linecap: round;
+    fill: transparent;
+    stroke-dasharray: 155;
+    stroke-dashoffset: 155;
+    animation: dash 0.9s ease-in-out 0.5s forwards;
+  }
+}
+
+.intro {
+  font-size: 2rem;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: fadeIn 0.5s ease-in-out 0.2s forwards;
+}
+
+.links {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
 a {
-  color: currentColor;
+  color: var(--bodyColor);
+  display: inline-block;
+  transition: all 0.2s;
 
   &:hover {
+    color: var(--highlightColor);
     background-color: var(--bodyColor);
-    color: var(--backgroundColor);
-    text-decoration: line-through;
+    text-decoration: none;
   }
 }
 
-svg {
-  width: 0.9rem;
-  fill: inherit;
-}
-
-nav {
-  display: flex;
-  margin-left: -0.3rem;
-}
-
-nav a {
-  flex: 1;
-  display: flex;
-  padding: 0.3rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.15rem;
-  margin-right: 0.5rem;
-}
-
-@media screen and (min-width: 600px) {
-  div.wrapper {
-    padding: 1.2rem;
-  }
-  div.box {
-    padding: 1.2rem;
-  }
-  div.box1 {
-    border: 2px solid currentColor;
-    padding: 1.2rem;
-  }
-
-  svg {
-    width: 0.7rem;
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    transform: translateY(0);
   }
 }
 
-@media screen and (min-width: 1181px) {
-  div.wrapper {
-    padding: 1.5rem;
-  }
-  div.box {
-    padding: 1.5rem;
-  }
-  div.box1 {
-    padding: 1.5rem;
-  }
-  div.box2 {
-    border: 2px solid currentColor;
-    padding: 1.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-    color: white;
-  }
-
-  a {
-    color: white;
-  }
-}
-
-
-@supports (-webkit-touch-callout: none) {
-  div.wrapper {
-    /* for ios safari 15, safe-area-inset-bottom is 0, so a special fix apply here */
-    min-height: -webkit-fill-available;
+@keyframes fadeIn {
+  to {
+    opacity: 100;
+    transform: translateY(0);
   }
 }

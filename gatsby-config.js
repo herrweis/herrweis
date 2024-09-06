@@ -9,8 +9,8 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
   siteMetadata: {
-    title: `Andreas Weis — Product designer and frontend developer`,
-    description: `Personal website of Andreas Weis`,
+    title: `Andreas Weis — Product Design Leadership`,
+    description: `Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams`,
     author: `@andi_weis`,
     siteUrl,
   },

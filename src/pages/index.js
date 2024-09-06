@@ -1,42 +1,40 @@
 import React from "react"
+import AnimatedCursor from "react-animated-cursor"
 
-import setBodyColors from "../components/setBodyColors"
+// import setBodyColors from "../components/setBodyColors"
 // import Humanize from "../components/humanize"
 // let getAJobText = "I have been designing and developing digital and physical things for over <Humanize number={(new Date().getFullYear() - 2002)} /> years."
 
-setBodyColors();
+// setBodyColors();
 
 export default function Page() {
   return (
-    <div className="wrapper" onClick={setBodyColors}>
-      <div className="box">
-        <div className="box1">
-          <div className="box2">
-            <h1>Andreas Weis</h1>
-            <h2>Head of Digital Design, Melbourne</h2>
-            <p>
-              I help businesses design human centred and easy-to-use products.
-            </p>
-            <p>  
-              Currently for <a href="//bendigobank.com.au" aria-label="Go to Bendigo Bank's website">Bendigo Bank</a> where I am standing up the group's first digital design practice.
-            </p>
-            <p>
-              Previously at <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>, <a href="//up.com.au" aria-label="Go to Up's website">Up</a> and <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">the University of Melbourne</a> amongst other awesome places.
-            </p>
-            <nav>
-              <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">
-                <svg aria-label="Icon for email contact" className="icon" role="img" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" fill="currentColor"/></svg>
-              </a>
-              <a href="//www.linkedin.com/pub/andreas-weis/15/4a1/b11/en" aria-label="Connect with me on LinkedIn">
-                <svg aria-label="LinkedIn Logo" className="icon" role="img" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" fill="currentColor"/></svg>
-              </a>
-              <a href="//github.com/herrweis/" aria-label="My repositories">
-                <svg aria-label="Github Logo" className="icon" role="img" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/></svg>
-              </a>
-            </nav>
-          </div>
-        </div>
+    <div className="wrapper">
+      <h1>Andreas Weis</h1>
+      <div className="logoWrapper">
+        <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
+          <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
+          <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
+          <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
+        </svg>
       </div>
+      <p className="intro">
+        Design leader with 15+ years experience leading and creating diverse design teams and 22+ years as a multidisciplinary designer; based in Melbourne/Narrm; making the uncomfortable comfortable;
+      </p>
+      <p className="links">
+        I have worked with <a href="//bendigobank.com.au" aria-label="Go to Bendigo Bank's website">Bendigo Bank</a>, <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>, <a href="//up.com.au" aria-label="Go to Up's website">Up</a>, <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">University of Melbourne</a>, and other awesome places. <a href="//www.linkedin.com/pub/andreas-weis/15/4a1/b11/en" aria-label="Connect with me on LinkedIn">Find me on LinkedIn</a> or <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">write me an email</a>.
+      </p>
+      <AnimatedCursor
+        innerSize={44}
+        outerSize={0}
+        innerScale={2}
+        outerScale={1}
+        outerAlpha={0}
+        innerStyle={{
+          backgroundColor: 'var(--highlightColor)',
+          mixBlendMode: 'multiply'
+        }}
+      />
     </div>
   )
 }
@@ -45,9 +43,10 @@ export function Head() {
   return (
       <>
           <meta charSet="utf-8" />
-          <title>Andreas Weis | Product Design Leader</title>
-          <meta name="description" content="Personal website of Andreas Weis"/>
+          <title>Andreas Weis | Product Design Leadership</title>
+          <meta name="description" content="Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
           <link rel="canonical" href="https://andreasweis.com" />
+          <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
           <html lang="en" />
       </>
   )
