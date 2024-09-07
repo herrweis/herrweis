@@ -9,7 +9,7 @@ setBodyColors();
 
 export default function Page() {
   return (
-    <div className="wrapper">
+    <div className="wrapper" onClick={setBodyColors}>
       <h1>Andreas Weis</h1>
       <div className="logoWrapper">
         <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
