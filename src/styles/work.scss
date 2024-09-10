@@ -1,5 +1,5 @@
 .work {
- padding: 0.3rem;
+ padding: 0.4rem;
 }
 
 .work-navigation {
@@ -47,7 +47,14 @@
 }
 
 .other-work {
-    padding: 5rem 1rem 1rem 1rem;
+    padding: 5rem 0 1rem 0;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeIn 0.5s ease-in-out 0.8s forwards;
+
+    &.with-padding {
+        padding: 5rem 1rem 1rem 1rem;
+    }
 
     ul {
         list-style-type: none;
@@ -113,7 +120,7 @@
 }
 
 .media-full-width {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     opacity: 0;
     transform: translateY(2rem);
     animation: fadeIn 0.5s ease-in-out 0.6s forwards;
@@ -129,26 +136,33 @@
     }
 }
 .media-15-width {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
+    span {
+        // height: auto !important;
+    }
 
     img, video {
         display: block;
-        width: 15%;
+        width: 15% !important;
         margin: 0 auto;
     }
 }
 
 .padding-top-bottom {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.padding-top-bottom-large {
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
+.padding-top-bottom-large {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
 
 .padding-top {
-    padding-top: 3rem;
+    padding-top: 5rem;
+}
+
+.padding-bottom {
+    padding-bottom: 5rem;
 }
 
 .two-cols-media-right {
@@ -167,7 +181,7 @@
 
     img, video {
         display: block;
-        width: 100%;
+        width: 95%;
     }
 }
 
@@ -181,8 +195,9 @@
     margin-right: -0.7rem;
     width: 50%;
     z-index: 10000;
+    min-width: 15rem;
 }
 .overlap-top {
     margin-top: -0.7rem;
-    padding: 0 1rem;
+    // padding: 0 1rem;
 }

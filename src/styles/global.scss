@@ -53,6 +53,7 @@ h1 {
 .logo {
   display: block;
   height: 1.5rem;
+  transition: transform 0.2s ease-in-out;
 
   path {
     stroke: var(--bodyColor);
@@ -90,6 +91,11 @@ a {
     color: var(--backgroundColor);
     background-color: var(--bodyColor);
     text-decoration: none;
+
+    .logo {
+      background-color: var(--backgroundColor);
+      transform: scale(1.2);
+    }
   }
 }
 

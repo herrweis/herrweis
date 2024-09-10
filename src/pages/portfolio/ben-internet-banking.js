@@ -1,5 +1,6 @@
 import React from "react"
-import VideoTag from "../../components/VideoTag"
+
+import VideoComponent from "../../components/VideoComponent"
 
 import AnimatedCursor from "react-animated-cursor"
 import VideoPoster from "../../videos/ben/poster.mp4"
@@ -21,11 +22,13 @@ export default function Page() {
     <div className="work">
         <div className="work-navigation">
             <div className="logoWrapper">
-                <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
-                <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
-                <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
-                <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
-                </svg>
+                <a href="/portfolio">
+                    <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
+                        <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
+                        <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
+                        <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
+                    </svg>
+                </a>
             </div>
             <div className="work-navigation-links">
                 <a href="#" className="next">Next</a>
@@ -57,7 +60,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <VideoTag videoFile={VideoPoster} videoPoster={PosterPoster} />
+            <VideoComponent src={VideoPoster} poster={PosterPoster} />
         </div>
         <div className="media-full-width">
             <img src={ImageAppScreens} alt="Various Bendigo Internet Banking app screens" />
@@ -68,7 +71,7 @@ export default function Page() {
                     <p className="overlap overlap-right">Showing only one balance at a time makes it easier to understand your finances at a glance, while still letting customers choose which balance they prefer to view</p>
                 </div>
                 <div>
-                    <VideoTag videoFile={VideoBalance} videoPoster={BalancePoster} />
+                    <VideoComponent src={VideoBalance} poster={BalancePoster} />
                 </div>
             </div>
             <div className="media-full-width padding-top">
@@ -76,24 +79,28 @@ export default function Page() {
             </div>
         </div>
         <div className="media-full-width">
-            <VideoTag videoFile={VideoSignup} videoPoster={SignupPoster} />
+            <VideoComponent src={VideoSignup} poster={SignupPoster} />
             <p className="overlap overlap-top">Increasing new customer sign-ups by offering a fully digital, seamless experience that allows you to become a customer faster than ordering and drinking your flat white.</p>
         </div>
         <div className="media-15-width padding-top-bottom-large">
-            <VideoTag videoFile={VideoLogoLoading} videoPoster="" />
+            <VideoComponent src={VideoLogoLoading} />
         </div>
         <div className="media-full-width">
-            <img src={ImageBigBang} alt="Image of old and new app design" />    
-            <p className="overlap">In anticipation of potential negative feedback, we planned to introduce the new design gradually to our change-resistant user base. Instead of a big bang rollout, we opted for implementing small, incremental updates over time, allowing users to adapt more comfortably and ensuring a smoother transition to the new design.</p>
+            <img src={ImageBigBang} alt="Image of old and new app design" />
+            <div className="padding-top-bottom">
+                <p className="overlap">In anticipation of potential negative feedback, we planned to introduce the new design gradually to our change-resistant user base. Instead of a big bang rollout, we opted for implementing small, incremental updates over time, allowing users to adapt more comfortably and ensuring a smoother transition to the new design.</p>
+                <p className="overlap">Evolution instead of revolution.</p>
+            </div>
         </div>
         <div className="media-full-width">
-            <VideoTag videoFile={VideoEvolution} videoPoster={EvolutionPoster} />
+            <VideoComponent src={VideoEvolution} poster={EvolutionPoster} />
         </div>
-        <div className="work-text-large">
+        <div className="work-text-large padding-top">
             <p>The new designs sparked a completely new app strategy, but due to technological limitations, building on the existing app wasn’t feasible. Instead, the designs now form the foundation for a brand-new app, currently in development, utilizing Up’s technology.</p>
+            <p>♥</p>
         </div>
             
-        <nav className="other-work">
+        <nav className="other-work with-padding">
             <ul>
                 <li>
                     <a href="#">Evolving Bendigo Bank’s internet banking app</a>
