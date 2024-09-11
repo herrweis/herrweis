@@ -44,7 +44,6 @@ export const VideoComponent = ({
     if (isVisible) {
       startVideoOnMouseMove();
     } else {
-      console.log("stop", videoRef.current);
       stopVideoOnMove();
     }
   }, [isVisible, startVideoOnMouseMove, stopVideoOnMove]);

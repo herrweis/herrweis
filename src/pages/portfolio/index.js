@@ -1,5 +1,6 @@
 import React from "react"
 import AnimatedCursor from "react-animated-cursor"
+import PortfolioLinks from "../../components/PortfolioLinks"
 
 export default function Page() {
   return (
@@ -20,25 +21,7 @@ export default function Page() {
       <p className="links">
         I have worked with <a className="custom" href="//bendigobank.com.au" aria-label="Go to Bendigo Bank's website">Bendigo Bank</a>, <a href="//ferocia.com.au" aria-label="Go to Ferocia's website">Ferocia</a>, <a href="//up.com.au" aria-label="Go to Up's website">Up</a>, <a href="//unimelb.edu.au" aria-label="Go to University of Melbourne's website">University of Melbourne</a>, and other awesome places. <a href="//www.linkedin.com/pub/andreas-weis/15/4a1/b11/en" aria-label="Connect with me on LinkedIn">Find me on LinkedIn</a> or <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">write me an email</a>.
       </p>
-      <nav className="other-work">
-          <ul>
-              <li>
-                  <a href="ben-internet-banking">Evolving Bendigo Bank’s internet banking app</a>
-              </li>
-              <li>
-                  <a href="#">Creating a navigation for a new bank</a>
-              </li>
-              <li>
-                  <a href="#">Pushing a valuable brand digitally</a>
-              </li>
-              <li>
-                  <a href="#">Product strategy and a roadmap for internet banking</a>
-              </li>
-              <li>
-                  <a href="#">Strategy and implementation of a Digital Design Practice</a>
-              </li>
-          </ul>
-      </nav>
+      <PortfolioLinks />
       
       <AnimatedCursor
         innerSize={44}

@@ -1,5 +1,5 @@
 .work {
- padding: 0.4rem;
+ padding: 0.3rem;
 }
 
 .work-navigation {
@@ -83,6 +83,12 @@
         }
     }
 }
+.work {
+    .other-work {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 
 .work-text-large {
     font-size: 2.5rem;
@@ -91,6 +97,7 @@
     opacity: 0;
     transform: translateY(2rem);
     animation: fadeIn 0.5s ease-in-out 0.2s forwards;
+    max-width: 45rem;
     
     p {
         margin: 1.75rem 0;
@@ -100,6 +107,7 @@
 .work-meta {
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
     padding: 1rem 1rem 0 1rem;
@@ -110,13 +118,21 @@
     animation: fadeIn 0.5s ease-in-out 0.4s forwards;
 }
 .work-meta-element {
-    padding: 0 3rem 0 0;
+    padding: 0 3rem 1.5rem 0;
 }
 .work-meta-element-title {
 
 }
 .work-meta-element-content {
 
+}
+
+.work-text {
+    padding: 0 1rem;
+
+    p {
+        max-width: 40rem;
+    }
 }
 
 .media-full-width {
@@ -148,6 +164,7 @@
     }
 }
 
+
 .padding-top-bottom {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -170,8 +187,8 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 100%;
     margin-bottom: 0.3rem;
+    width: 90%;
 
     & > div {
         flex: 1 1 auto;
@@ -195,9 +212,57 @@
     margin-right: -0.7rem;
     width: 50%;
     z-index: 10000;
-    min-width: 15rem;
+    min-width: 11rem;
 }
 .overlap-top {
     margin-top: -0.7rem;
-    // padding: 0 1rem;
 }
+
+.metro-svg-container {
+    background-color: #fbf3ee;
+    padding: 1rem;
+}
+
+.metro-svg-container > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    outline: none;
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes opacity {
+      to {
+        opacity: 1;
+      }
+    }
+    #central-background {
+      opacity: 0;
+      animation: opacity 1s ease-in-out forwards;
+    }
+    #lines path {
+      stroke-dasharray: 10000;
+      stroke-dashoffset: 10000;
+      animation: dash 2s ease-in-out forwards 1s;
+    }
+    #line-names {
+      opacity: 0;
+      animation: opacity 0.5s ease-in-out forwards 3s;
+    }
+    #line-ends {
+      opacity: 0;
+      animation: opacity 0.5s ease-in-out forwards 3s;
+    }
+    #stations {
+      opacity: 0;
+      animation: opacity 1s ease-in-out forwards 3.5s;
+    }
+    #districts {
+      opacity: 0;
+      animation: opacity 1s ease-in-out forwards;
+    }
+  }

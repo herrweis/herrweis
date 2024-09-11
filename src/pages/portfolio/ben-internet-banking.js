@@ -1,8 +1,9 @@
 import React from "react"
-
+import { Link } from "gatsby"
 import VideoComponent from "../../components/VideoComponent"
-
+import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
+
 import VideoPoster from "../../videos/ben/poster.mp4"
 import PosterPoster from "../../videos/ben/poster.jpg"
 import VideoBalance from "../../videos/ben/balance.mp4"
@@ -22,16 +23,16 @@ export default function Page() {
     <div className="work">
         <div className="work-navigation">
             <div className="logoWrapper">
-                <a href="/portfolio">
+                <Link to="/portfolio">
                     <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
                         <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
                         <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
                         <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
                     </svg>
-                </a>
+                </Link>
             </div>
             <div className="work-navigation-links">
-                <a href="#" className="next">Next</a>
+                <Link to="/portfolio/up-navigation" className="next">Next</Link>
             </div>
         </div>
 
@@ -80,7 +81,7 @@ export default function Page() {
         </div>
         <div className="media-full-width">
             <VideoComponent src={VideoSignup} poster={SignupPoster} />
-            <p className="overlap overlap-top">Increasing new customer sign-ups by offering a fully digital, seamless experience that allows you to become a customer faster than ordering and drinking your flat white.</p>
+            <p className="overlap">Increasing new customer sign-ups by offering a fully digital, seamless experience that allows you to become a customer faster than ordering and drinking your flat white.</p>
         </div>
         <div className="media-15-width padding-top-bottom-large">
             <VideoComponent src={VideoLogoLoading} />
@@ -100,26 +101,8 @@ export default function Page() {
             <p>♥</p>
         </div>
             
-        <nav className="other-work with-padding">
-            <ul>
-                <li>
-                    <a href="#">Evolving Bendigo Bank’s internet banking app</a>
-                </li>
-                <li>
-                    <a href="#">Creating a navigation for a new bank</a>
-                </li>
-                <li>
-                    <a href="#">Pushing a valuable brand digitally</a>
-                </li>
-                <li>
-                    <a href="#">Product strategy and a roadmap for internet banking</a>
-                </li>
-                <li>
-                    <a href="#">Strategy and implementation of a Digital Design Practice</a>
-                </li>
-            </ul>
-        </nav>
-            
+        
+        <PortfolioLinks />
             
             
         
