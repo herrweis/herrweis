@@ -230,16 +230,6 @@
     margin: 0 auto;
     outline: none;
 
-    @keyframes dash {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-    @keyframes opacity {
-      to {
-        opacity: 1;
-      }
-    }
     #central-background {
       opacity: 0;
       animation: opacity 1s ease-in-out forwards;
@@ -247,22 +237,39 @@
     #lines path {
       stroke-dasharray: 10000;
       stroke-dashoffset: 10000;
-      animation: dash 2s ease-in-out forwards 1s;
     }
     #line-names {
       opacity: 0;
-      animation: opacity 0.5s ease-in-out forwards 3s;
     }
     #line-ends {
       opacity: 0;
-      animation: opacity 0.5s ease-in-out forwards 3s;
     }
     #stations {
       opacity: 0;
-      animation: opacity 1s ease-in-out forwards 3.5s;
     }
     #districts {
       opacity: 0;
-      animation: opacity 1s ease-in-out forwards;
     }
+  }
+
+  .svg-on-screen {
+    #central-background {
+        opacity: 0;
+        animation: opacity 1s ease-in-out forwards;
+      }
+      #lines path {
+        animation: dash 2s ease-in-out forwards 1s;
+      }
+      #line-names {
+        animation: opacity 0.5s ease-in-out forwards 3s;
+      }
+      #line-ends {
+        animation: opacity 0.5s ease-in-out forwards 3s;
+      }
+      #stations {
+        animation: opacity 1s ease-in-out forwards 3.5s;
+      }
+      #districts {
+        animation: opacity 1s ease-in-out forwards;
+      }
   }

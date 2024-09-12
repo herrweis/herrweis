@@ -4,6 +4,10 @@ import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
 
+import ImageInvestorDay from "../../images/brand/investor_day.jpg"
+import Mockup from "../../images/brand/mockup.jpg"
+import InvestorPreso from "../../images/brand/investor-preso.jpg"
+
 
 export default function Page() {
   return (
@@ -24,7 +28,7 @@ export default function Page() {
         </div>
 
         <div className="work-text-large">
-            <p>Pushing the brand forward digitally by using a highly visible event for the bank we started to explore its full potential. We reimagined the existing brand elements, keeping the same colours and fonts while applying them in a different context, and also experimenting with new layouts, spacing, and simplification.</p>
+            <p>Using a highly visible event for the bank, we began to elevate the brand digitally and explore its full potential. We reimagined the existing brand elements, keeping the same colours and fonts while applying them in a different context, and also experimenting with new layouts, spacing, and simplification.</p>
         </div>
 
         <div className="work-meta">
@@ -45,11 +49,30 @@ export default function Page() {
             </div>
         </div>
 
-        <div className="work-text-large padding-top">
-            <p>WIP</p>
-            <p>♥</p>
+        <div className="media-full-width">
+            <img src={ImageInvestorDay} alt="Photo of Bendigo Bank's Investor Day 2024" />
+        </div>
+
+        <div className="work-text padding-bottom">
+            <p>For Bendigo and Adelaide Bank’s high-profile Investor Day 2024, we took advantage of the event’s significance to experiment with the brand’s digital expression. The presentation served as an ideal platform to explore new design elements and layouts, bringing a modern twist to the bank’s visual identity without altering its established tone. While the bank was sharing its strategic vision with investors and analysts, we subtly introduced fresh arrangements of the existing brand assets, including colour use, typography, and spacing. This allowed us to refresh the brand’s digital presence while ensuring its core message and voice remained intact. The approach was both innovative and respectful of the brand’s trusted reputation, resonating well with stakeholders while maintaining a consistent narrative.</p>
+        </div>
+
+        <div className="media-full-width">
+            <img src={Mockup} alt="Mockup of three presentation pages" />
+        </div>
+
+        <div className="work-text padding-top-bottom-large">
+            <p>The presentation at Bendigo and Adelaide Bank’s Investor Day 2024 was a resounding success. One immediate outcome was the rework of internal presentation templates, aligning them with the refreshed visual direction. More significantly, the event fostered a deeper understanding of the critical role design plays across the organisation. This experience emphasized the value of a professional design mindset, with design-led thinking becoming increasingly integrated into the bank’s processes.</p>
+        </div>
+
+        <div className="media-full-width">
+            <img src={InvestorPreso} alt="Presentation page" />
         </div>
             
+        <div className="work-text-large">
+            <p>The success of this initiative helped to cement the importance of design as a key driver of innovation and clarity within the organisation, shaping the way it approaches both internal and external communications.</p>
+            <p>♥</p>
+        </div>
         
         <PortfolioLinks />
             

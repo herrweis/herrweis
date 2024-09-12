@@ -111,3 +111,9 @@ a {
     transform: translateY(0);
   }
 }
+
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
