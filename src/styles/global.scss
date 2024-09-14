@@ -87,6 +87,10 @@ a {
   display: inline-block;
   transition: all 0.2s;
 
+  .logo {
+    background-color: var(--backgroundColor);
+  }
+
   &:hover {
     color: var(--backgroundColor);
     background-color: var(--bodyColor);

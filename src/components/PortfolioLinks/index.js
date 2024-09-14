@@ -19,7 +19,7 @@ class PortfolioLinks extends Component {
                     <Link to="/portfolio/ben-internet-banking">Evolving Bendigo Bank’s internet banking app</Link>
                 </li>
                 <li>
-                    <Link to="/portfolio/up-navigation"><span style={{textDecoration: 'line-through'}}>Creating a navigation for a new bank</span> (<i>under construction</i>)</Link>
+                    <Link to="/portfolio/up-foundations">Foundations for a new digital bank</Link>
                 </li>
                 <li>
                     <Link to="/portfolio/ben-digital-brand">Pushing a valuable brand digitally</Link>
@@ -27,6 +27,12 @@ class PortfolioLinks extends Component {
                 <li>
                     <Link to="/portfolio/product-strategy">Product strategy and a roadmap for internet banking</Link>
                 </li>
+                {/* <li>
+                    <Link to="/portfolio/pursuit">Pursuit — cutting-edge research news and expert commentary</Link>
+                </li>
+                <li>
+                    <Link to="/portfolio/unimelb-design">A design System for the Univerity of Melbourne</Link>
+                </li> */}
             </ul>
         </nav>
     )
