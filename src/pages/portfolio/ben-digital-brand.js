@@ -96,8 +96,8 @@ export function Head() {
   return (
       <>
           <meta charSet="utf-8" />
-          <title>Andreas Weis | Portfolio | Product Design Leadership</title>
-          <meta name="description" content="Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+          <title>Andreas Weis | Pushing a valuable brand digitally</title>
+          <meta name="description" content="Reimagining Bendigo Bank’s brand digitally involved taking the well-established brand elements and translating them into a modern, digital context."/>
           <link rel="canonical" href="https://andreasweis.com" />
           <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
           <html lang="en" />

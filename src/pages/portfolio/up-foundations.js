@@ -93,8 +93,8 @@ export function Head() {
   return (
       <>
           <meta charSet="utf-8" />
-          <title>Andreas Weis | Portfolio | Product Design Leadership</title>
-          <meta name="description" content="Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+          <title>Andreas Weis | Foundations for a new digital bank</title>
+          <meta name="description" content="At Up, we embraced a clean slate approach to challenge traditional banking interfaces, questioning conventional patterns and reimagining key interactions to lay the foundations for a new digital bank."/>
           <link rel="canonical" href="https://andreasweis.com" />
           <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
           <html lang="en" />

@@ -104,8 +104,8 @@ export function Head() {
   return (
       <>
           <meta charSet="utf-8" />
-          <title>Andreas Weis | Portfolio | Product Design Leadership</title>
-          <meta name="description" content="Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+          <title>Andreas Weis | Strategy and implementation of a Digital Design Practice</title>
+          <meta name="description" content="My strategy and implementation plan for the new Digital Design Practice focused on introducing start-up culture into one of Australia’s most trusted financial brands."/>
           <link rel="canonical" href="https://andreasweis.com" />
           <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
           <html lang="en" />
