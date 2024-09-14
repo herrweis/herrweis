@@ -32,7 +32,7 @@ export default function Page() {
                 </Link>
             </div>
             <div className="work-navigation-links">
-                <Link to="/portfolio/up-navigation" className="next">Next</Link>
+                <Link to="/portfolio/up-foundations" className="next">Next</Link>
             </div>
         </div>
 

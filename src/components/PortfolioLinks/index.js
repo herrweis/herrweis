@@ -1,43 +1,98 @@
-import React, { Component } from "react"
+import React, { Component, useCallback, useEffect, useState, useLayoutEffect } from "react"
 import { Link } from "gatsby"
 
-class PortfolioLinks extends Component {
+import ImageStrategy from "../../images/previews/strategy.jpg"
+import ImageBen from "../../images/previews/ben.jpg"
+import ImageUp from "../../images/previews/up.jpg"
+import ImageBrand from "../../images/previews/brand.jpg"
+import ImageProductStrat from "../../images/previews/productstrat.jpg"
 
-  constructor(props) {
-    super(props);
-  }
+const useMousePosition = () => {
+    const [mousePosition, setMousePosition] = React.useState({x: 0, y: 0});
+    useEffect(() => {
+        const updateMousePosition = event => {
+            setMousePosition({x: event.clientX, y: event.clientY});
+        }
+        window.addEventListener('mousemove', updateMousePosition);
+        return () => window.removeEventListener('mousemove', updateMousePosition);
+    }, [])
 
-  render () {
+    return mousePosition;
+}
+
+
+const PortfolioLinks = () => {
+
+    const Navigation = [
+        {
+            to: "/portfolio/design-practice",
+            img: ImageStrategy,
+            label: "Strategy and implementation of a Digital Design Practice"
+        },
+        {
+            to: "/portfolio/ben-internet-banking",
+            img: ImageBen,
+            label: "Evolving Bendigo Bank’s internet banking app"
+        },
+        {
+            to: "/portfolio/up-foundations",
+            img: ImageUp,
+            label: "Foundations for a new digital bank"
+        },
+        {
+            to: "/portfolio/ben-digital-brand",
+            img: ImageBrand,
+            label: "Pushing a valuable brand digitally"
+        },
+        {
+            to: "/portfolio/product-strategy",
+            img: ImageProductStrat,
+            label: "Product strategy and a roadmap for internet banking"
+        },
+    ]
+
+    const [activeIndex, setActiveIndex] = React.useState(-1);
+    const {x, y} = useMousePosition();
 
     return (
-        <nav className="other-work">
-            <ul>
-                <li>
-                    <Link to="/portfolio/design-practice">Strategy and implementation of a Digital Design Practice</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio/ben-internet-banking">Evolving Bendigo Bank’s internet banking app</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio/up-foundations">Foundations for a new digital bank</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio/ben-digital-brand">Pushing a valuable brand digitally</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio/product-strategy">Product strategy and a roadmap for internet banking</Link>
-                </li>
-                {/* <li>
-                    <Link to="/portfolio/pursuit">Pursuit — cutting-edge research news and expert commentary</Link>
-                </li>
-                <li>
-                    <Link to="/portfolio/unimelb-design">A design System for the Univerity of Melbourne</Link>
-                </li> */}
-            </ul>
-        </nav>
+        <div>
+            <nav className="other-work">
+                <ul>
+                    {
+                        Navigation.map(({to, img, label}, index ) => (
+                            <li>
+                                <Link to={to}
+                                    onMouseEnter={()=>setActiveIndex(index)}
+                                    onMouseLeave={()=>setActiveIndex(-1)}
+                                >
+                                    {label}
+                                </Link>
+                            </li>
+                    ))}
+                </ul>
+            </nav>
+            <div className="preview-images">
+            {
+                Navigation.map(({to, img, label}, index ) => {
+                    const active = index === activeIndex;
+
+                    return (
+                        <img
+                            className={active && 'is-active'}
+                            src={img}
+                            alt="label"
+                            style={{
+                                // transform: `translate(${x}px, ${y}px)`
+                                top: `${y}px`,
+                                left: `${x}px`
+                            }}
+                        />
+                    )
+                })}
+            </div>
+        </div>
     )
 
-  }
-}
+};
 
 export default PortfolioLinks
