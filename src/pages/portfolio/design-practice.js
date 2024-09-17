@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
 
@@ -24,9 +23,9 @@ export default function Page() {
                     </svg>
                 </Link>
             </div>
-            <div className="work-navigation-links">
+            {/* <div className="work-navigation-links">
                 <Link to="/portfolio/ben-internet-banking" className="next">Next</Link>
-            </div>
+            </div> */}
         </div>
 
         <div className="work-text-large">
@@ -58,19 +57,19 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={Image01Cover} alt="Image of the strategy brochure cover" />
+            <img src={Image01Cover} alt="Strategy brochure cover" />
         </div>
         <div className="media-full-width">
-            <img src={Image02Intro} alt="Image of the strategy brochure intro" />
+            <img src={Image02Intro} alt="Strategy brochure intro" />
         </div>
         <div className="media-full-width">
-            <img src={Image03Vision} alt="Image of the strategy vision " />
+            <img src={Image03Vision} alt="Strategy vision " />
         </div>
         <div className="media-full-width">
-            <img src={Image04Scope} alt="Image of the strategy scope " />
+            <img src={Image04Scope} alt="Strategy scope " />
         </div>
         <div className="media-full-width">
-            <img src={Image05Impression} alt="Image of the strategy brochure " />
+            <img src={Image05Impression} alt="Strategy brochure " />
         </div>
 
         <div className="work-text padding-top">

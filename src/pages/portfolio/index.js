@@ -7,7 +7,7 @@ export default function Page() {
     <div className="portfolio">
       <h1>Andreas Weis</h1>
       <div className="logoWrapper">
-         <a href="/portfolio">
+         <a href="/portfolio" aria-label="Home">
             <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
                 <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
                 <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>

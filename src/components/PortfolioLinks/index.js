@@ -1,4 +1,4 @@
-import React, { Component, useCallback, useEffect, useState, useLayoutEffect } from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
 
 import ImageStrategy from "../../images/previews/strategy.jpg"
@@ -6,6 +6,7 @@ import ImageBen from "../../images/previews/ben.jpg"
 import ImageUp from "../../images/previews/up.jpg"
 import ImageBrand from "../../images/previews/brand.jpg"
 import ImageProductStrat from "../../images/previews/productstrat.jpg"
+import ImagePursuit from "../../images/previews/pursuit.jpg"
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({x: 0, y: 0});
@@ -48,6 +49,11 @@ const PortfolioLinks = () => {
             to: "/portfolio/product-strategy",
             img: ImageProductStrat,
             label: "Product strategy and a roadmap for internet banking"
+        },
+        {
+            to: "/portfolio/pursuit",
+            img: ImagePursuit,
+            label: "Creating an award-winning research news website for Australia's leading university"
         },
     ]
 

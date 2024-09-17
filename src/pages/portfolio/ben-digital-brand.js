@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
 
@@ -22,9 +21,9 @@ export default function Page() {
                     </svg>
                 </Link>
             </div>
-            <div className="work-navigation-links">
+            {/* <div className="work-navigation-links">
                 <Link to="/portfolio/product-strategy" className="next">Next</Link>
-            </div>
+            </div> */}
         </div>
 
         <div className="work-text-large">
@@ -50,7 +49,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={ImageInvestorDay} alt="Photo of Bendigo Bank's Investor Day 2024" />
+            <img src={ImageInvestorDay} alt="Bendigo Bank's executive suite at Investor Day 2024" />
         </div>
 
         <div className="work-text padding-bottom">
@@ -58,7 +57,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={Mockup} alt="Mockup of three presentation pages" />
+            <img src={Mockup} alt="Three presentation pages falling from the ceiling" />
         </div>
 
         <div className="work-text padding-top-bottom-large">

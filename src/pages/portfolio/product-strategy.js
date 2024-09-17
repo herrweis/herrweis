@@ -23,9 +23,9 @@ export default function Page() {
                         </svg>
                     </Link>
                 </div>
-                <div className="work-navigation-links">
+                {/* <div className="work-navigation-links">
                     <Link to="/portfolio/design-practice" className="next">Next</Link>
-                </div>
+                </div> */}
             </div>
 
             <div className="work-text-large">
@@ -60,7 +60,8 @@ export default function Page() {
                 <img src={ImageDigitalBranch} alt="Cover of a presentation title 'The digital branch'" />
             </div>
 
-            <div className="work-text padding-top-bottom">
+            <div className="work-text padding-bottom">
+                <p>I developed a bold and bespoke digital vision that aligned with Bendigo Bank’s overarching goals while placing the customer at the heart of the strategy. This vision focused on bringing the bank’s key differentiators—those qualities that make Bendigo Bank the most trusted in Australia—from the physical world into the digital space. By translating its core values of trust, reliability, and community into the online environment, we ensured that customers experienced the same sense of security and connection, while driving innovation and enhancing the digital experience.</p>
                 <p>I worked closely with stakeholders to identify key features and functionalities that would drive both short-term engagement and long-term growth. During this process, I combined user needs with tangible business KPIs and the organisation’s digital strategy to establish clear and measurable goals. This ensured that customer experience and business objectives were aligned, providing a strong foundation for the roadmap. I then created a unified vision that addressed both business objectives and customer needs.</p>
             </div>
 

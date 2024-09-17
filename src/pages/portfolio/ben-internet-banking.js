@@ -31,9 +31,9 @@ export default function Page() {
                     </svg>
                 </Link>
             </div>
-            <div className="work-navigation-links">
+            {/* <div className="work-navigation-links">
                 <Link to="/portfolio/up-foundations" className="next">Next</Link>
-            </div>
+            </div> */}
         </div>
 
         <div className="work-text-large">
@@ -87,7 +87,7 @@ export default function Page() {
             <VideoComponent src={VideoLogoLoading} />
         </div>
         <div className="media-full-width">
-            <img src={ImageBigBang} alt="Image of old and new app design" />
+            <img src={ImageBigBang} alt="Comparison of old and new app design" />
             <div className="padding-top-bottom">
                 <p className="overlap">In anticipation of potential negative feedback, we planned to introduce the new design gradually to our change-resistant user base. Instead of a big bang rollout, we opted for implementing small, incremental updates over time, allowing users to adapt more comfortably and ensuring a smoother transition to the new design.</p>
                 <p className="overlap">Evolution instead of revolution.</p>

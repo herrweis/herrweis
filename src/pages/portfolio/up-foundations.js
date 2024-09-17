@@ -23,9 +23,9 @@ export default function Page() {
                     </svg>
                 </Link>
             </div>
-            <div className="work-navigation-links">
+            {/* <div className="work-navigation-links">
                 <Link to="/portfolio/ben-digital-brand" className="next">Next</Link>
-            </div>
+            </div> */}
         </div>
 
         <div className="work-text-large">
