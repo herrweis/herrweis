@@ -56,7 +56,7 @@ export default function Page() {
 
         <div className="work-text padding-top-bottom">
             <p>Pursuit is an online platform run by the University of Melbourne that shares research, insights, and expert commentary on a wide range of topics. The platform connects the public with academic research, making complex subjects more accessible through articles written by researchers, academics, and professionals. It covers topics like health, technology, society, and the environment, and is designed to engage a broad audience, including students, professionals, and the general public.</p>
-            <p>Together with Web Marketing Director Paul Tagell, we conceived, prototyped, and pitched the concept for what would become Pursuit. Our goal was to create a digital platform that would allow the University to engage more deeply with the public by making its research and insights more accessible. The success of our prototype led to securing a significant development budget and the mandate to build the platform for the entire University of Melbourne, amplifying its reach and impact across various disciplines.</p>
+            <p>Together with Web Marketing Director <a href="https://tagell.com">Paul Tagell</a>, we conceived, prototyped, and pitched the concept for what would become Pursuit. Our goal was to create a digital platform that would allow the University to engage more deeply with the public by making its research and insights more accessible. The success of our prototype led to securing a significant development budget and the mandate to build the platform for the entire University of Melbourne, amplifying its reach and impact across various disciplines.</p>
         </div>
 
         <div className="media-full-width">

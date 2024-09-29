@@ -1,14 +1,5 @@
 import React from "react"
 import AnimatedCursor from "react-animated-cursor"
-import Intro from "../components/Intro"
-import IntroLinks from "../components/IntroLinks"
-// import PortfolioLinks from "../components/PortfolioLinks"
-
-// import setBodyColors from "../components/setBodyColors"
-// import Humanize from "../components/humanize"
-// let getAJobText = "I have been designing and developing digital and physical things for over <Humanize number={(new Date().getFullYear() - 2002)} /> years."
-
-// setBodyColors();
 
 export default function Page() {
   return (
@@ -23,8 +14,21 @@ export default function Page() {
             </svg>
         </a>
       </div>
-      <Intro />
-      <IntroLinks />
+      <p className="intro">
+        About
+      </p>
+      <p className="links">
+        I’m a design leader with over 22 years of experience who’s spent 15+ years building and transforming diverse design teams. I live for the challenge of making digital experiences not just usable but exceptional, both visually and functionally. Based in Melbourne/Narrm, I thrive on finding that sweet spot where design meets accessibility and usability—without sacrificing a single pixel of visual quality.
+      </p>
+      <p className="links">
+        I’ve been known to be the spanner in the works—the one who isn’t afraid to shake things up when it feels like everything’s getting too comfortable. I’ve built design practices from the ground up, shaped digital brands, and had my hands in just about every aspect of design you can imagine. And yes, I bring a bit of that start-up mentality everywhere I go because the best solutions usually come from a bit of disruption.
+      </p>
+      <p className="links">
+        Diversity and accessibility aren’t just buzzwords for me; they’re non-negotiables. I’m all about creating products that everyone can use, understand, and enjoy—whether that means meticulously refining micro-interactions or blowing up a design system that just doesn’t fit.
+      </p>
+      <p className="links">
+        So, if you’re after someone who will challenge the norm, push for the best possible design, and maybe stir the pot a little along the way, <a href="mailto:post@andreasweis.com?subject=👋" aria-label="Write me an email">let's chat</a>.
+      </p>
 
       {/* <PortfolioLinks /> */}
 

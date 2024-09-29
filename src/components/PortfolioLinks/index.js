@@ -7,6 +7,7 @@ import ImageUp from "../../images/previews/up.jpg"
 import ImageBrand from "../../images/previews/brand.jpg"
 import ImageProductStrat from "../../images/previews/productstrat.jpg"
 import ImagePursuit from "../../images/previews/pursuit.jpg"
+import ImageUnimelb from "../../images/previews/unimelb.jpg"
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({x: 0, y: 0});
@@ -54,6 +55,11 @@ const PortfolioLinks = () => {
             to: "/portfolio/pursuit",
             img: ImagePursuit,
             label: "Creating an award-winning research news website for Australia's leading university"
+        },
+        {
+            to: "/portfolio/unimelb-design",
+            img: ImageUnimelb,
+            label: "A digital design system and living style guide for The University of Melbourne"
         },
     ]
 
