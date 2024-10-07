@@ -1,6 +1,10 @@
 import React from "react"
 import AnimatedCursor from "react-animated-cursor"
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import 'react-tabs/style/react-tabs.css';
+
 import PortfolioLinks from "../../components/PortfolioLinks"
+import About from "../../components/About"
 import Intro from "../../components/Intro"
 import IntroLinks from "../../components/IntroLinks"
 
@@ -20,7 +24,18 @@ export default function Page() {
       
       <Intro />
       <IntroLinks />
-      <PortfolioLinks />
+      <Tabs>
+        <TabList>
+          <Tab>Work</Tab>
+          <Tab>About</Tab>
+        </TabList>
+        <TabPanel>
+          <PortfolioLinks />
+        </TabPanel>
+        <TabPanel>
+          <About />
+        </TabPanel>
+      </Tabs>
       
       <AnimatedCursor
         innerSize={44}
