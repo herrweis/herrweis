@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import Metro from "../../components/Metro"
 import AnimatedCursor from "react-animated-cursor"
+import { isMobile } from "react-device-detect";
 
 import ImageDigitalBranch from "../../images/productstrat/digital-branch-alt.jpg"
 import ImageGoals from "../../images/productstrat/customer-business-goals.jpg"
@@ -90,16 +91,16 @@ export default function Page() {
 
 
 
-            <AnimatedCursor
+            {isMobile ? null : <AnimatedCursor
                 innerSize={44}
                 outerSize={0}
                 innerScale={0.2}
                 outerScale={1}
                 outerAlpha={0}
                 innerStyle={{
-                    backgroundColor: 'var(--bodyColor)'
+                backgroundColor: 'var(--bodyColor)'
                 }}
-            />
+            />}
         </div>
     )
 }

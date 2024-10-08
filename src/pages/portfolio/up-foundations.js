@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
+import { isMobile } from "react-device-detect";
 
 import VideoSignup from "../../videos/up/signup.mp4"
 import SignupPoster from "../../videos/up/signup.jpg"
@@ -75,7 +76,7 @@ export default function Page() {
             
             
         
-        <AnimatedCursor
+        {isMobile ? null : <AnimatedCursor
             innerSize={44}
             outerSize={0}
             innerScale={0.2}
@@ -84,7 +85,7 @@ export default function Page() {
             innerStyle={{
             backgroundColor: 'var(--bodyColor)'
             }}
-        />
+        />}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import AnimatedCursor from "react-animated-cursor"
+import { isMobile } from "react-device-detect";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
 
 import PortfolioLinks from "../../components/PortfolioLinks"
 import About from "../../components/About"
@@ -36,8 +36,8 @@ export default function Page() {
           <About />
         </TabPanel>
       </Tabs>
-      
-      <AnimatedCursor
+
+      {isMobile ? null : <AnimatedCursor
         innerSize={44}
         outerSize={0}
         innerScale={0.2}
@@ -46,7 +46,7 @@ export default function Page() {
         innerStyle={{
           backgroundColor: 'var(--bodyColor)'
         }}
-      />
+      />}
     </div>
   )
 }

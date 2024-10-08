@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import PortfolioLinks from "../../components/PortfolioLinks"
 import AnimatedCursor from "react-animated-cursor"
+import { isMobile } from "react-device-detect";
 
 import ImageHeader from "../../images/unimelb/design_system_header.jpg"
 import ImageScreens from "../../images/unimelb/screens.jpg"
@@ -98,7 +99,7 @@ export default function Page() {
             
             
         
-        <AnimatedCursor
+        {isMobile ? null : <AnimatedCursor
             innerSize={44}
             outerSize={0}
             innerScale={0.2}
@@ -107,7 +108,7 @@ export default function Page() {
             innerStyle={{
             backgroundColor: 'var(--bodyColor)'
             }}
-        />
+        />}
     </div>
   )
 }

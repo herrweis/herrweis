@@ -1,5 +1,6 @@
 import React from "react"
 import AnimatedCursor from "react-animated-cursor"
+import { isMobile } from "react-device-detect";
 import Intro from "../components/Intro"
 import IntroLinks from "../components/IntroLinks"
 // import PortfolioLinks from "../components/PortfolioLinks"
@@ -28,7 +29,7 @@ export default function Page() {
 
       {/* <PortfolioLinks /> */}
 
-      <AnimatedCursor
+      {isMobile ? null : <AnimatedCursor
         innerSize={44}
         outerSize={0}
         innerScale={0.2}
@@ -37,7 +38,7 @@ export default function Page() {
         innerStyle={{
           backgroundColor: 'var(--bodyColor)'
         }}
-      />
+      />}
     </div>
   )
 }
