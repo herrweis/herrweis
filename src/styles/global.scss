@@ -3,7 +3,7 @@
   --bodyColor: black;
   --backgroundColor: white;
   // --highlightColor: #00E3B4;
-  --defaultFontSize: calc(14px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
+  --defaultFontSize: calc(16px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
 }
 
 html {
@@ -83,7 +83,7 @@ h1 {
   opacity: 0;
   transform: translateY(2rem);
   animation: fadeIn 0.5s ease-in-out 0.5s forwards;
-  max-width: 1600px;
+  max-width: 1200px;
 }
 
 a {
@@ -116,7 +116,7 @@ a {
 }
 
 .react-tabs__tab {
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: all 0.2s;
   padding: 0.3rem 1rem;
   border-radius: 0.2rem;
