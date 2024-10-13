@@ -138,6 +138,25 @@ a {
   margin-top: 0;
 }
 
+.expertise {
+  h3 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 0;
+    padding-top: 1rem;
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+    max-width: 1200px;
+    border-top: 2px solid var(--bodyColor);
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
