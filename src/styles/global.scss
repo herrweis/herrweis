@@ -118,9 +118,9 @@ a {
 .react-tabs__tab {
   font-size: 1.5rem;
   transition: all 0.2s;
-  padding: 0.3rem 1rem;
+  padding: 0.3rem 0.9rem;
   border-radius: 0.2rem;
-  border: 0.1rem solid var(--backgroundColor);
+  border: 0.1rem solid transparent;
 
   &:hover {
     color: var(--backgroundColor);

@@ -47,7 +47,7 @@ export default function Page() {
             </div>
             <div className="work-meta-element">
                 <div className="work-meta-element-title">Team</div>
-                <div className="work-meta-element-content">Unimelb Digtal Marketing</div>
+                <div className="work-meta-element-content">Unimelb Digital Marketing</div>
             </div>
         </div>
 

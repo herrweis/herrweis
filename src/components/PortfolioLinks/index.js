@@ -42,6 +42,11 @@ const PortfolioLinks = () => {
             label: "Foundations for a new digital bank"
         },
         {
+            to: "/portfolio/pursuit",
+            img: ImagePursuit,
+            label: "Creating an award-winning research news website for Australia's leading university"
+        },
+        {
             to: "/portfolio/ben-digital-brand",
             img: ImageBrand,
             label: "Pushing a valuable brand digitally"
@@ -50,11 +55,6 @@ const PortfolioLinks = () => {
             to: "/portfolio/product-strategy",
             img: ImageProductStrat,
             label: "Product strategy and a roadmap for internet banking"
-        },
-        {
-            to: "/portfolio/pursuit",
-            img: ImagePursuit,
-            label: "Creating an award-winning research news website for Australia's leading university"
         },
         {
             to: "/portfolio/unimelb-design",
@@ -89,14 +89,14 @@ const PortfolioLinks = () => {
                     const active = index === activeIndex;
 
                     return (
-                        <img
-                            className={active && 'is-active'}
+                        <div
+                            className={"img " +(active && 'is-active')}
                             src={img}
                             alt="label"
                             style={{
                                 // transform: `translate(${x}px, ${y}px)`
-                                top: `${y}px`,
-                                left: `${x}px`
+                                backgroundImage: `url(${img})`
+                                // left: `${x}px`
                             }}
                         />
                     )
