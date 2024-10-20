@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
+import { isMobile } from "react-device-detect";
 
 import ImageStrategy from "../../images/previews/strategy.jpg"
 import ImageBen from "../../images/previews/ben.jpg"
@@ -83,8 +84,9 @@ const PortfolioLinks = () => {
                     ))}
                 </ul>
             </nav>
-            <div className="preview-images">
-            {
+            {isMobile ? null : 
+                <div className="preview-images">
+                {
                 Navigation.map(({to, img, label}, index ) => {
                     const active = index === activeIndex;
 
@@ -101,7 +103,8 @@ const PortfolioLinks = () => {
                         />
                     )
                 })}
-            </div>
+                </div>
+            }
         </div>
     )
 
