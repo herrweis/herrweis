@@ -275,37 +275,18 @@
       }
   }
 
-  body {
-    position: relative;
-    background: transparent;
-  }
 
   .preview-images {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
 
-    .img {
-        display: block;
-        opacity: 0;
-        background-size: cover;
-        background-position: center;
+    img {
+        display: none;
         position: fixed;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        // transform: translateY(-110%) translateX(1rem);
-        width: 100%;
-        height: 100%;
-        transition: all 0.2s;
+        left: 0.5rem;
+        transform: translateY(-110%) translateX(1rem);
+        box-shadow: 0 0 2rem rgba(0,0,0,0.2);
     }
 
-    .img.is-active {
+    img.is-active {
         display: block;
-        opacity: 100;
     }
   }

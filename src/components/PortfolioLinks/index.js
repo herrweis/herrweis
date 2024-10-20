@@ -27,11 +27,6 @@ const PortfolioLinks = () => {
 
     const Navigation = [
         {
-            to: "/portfolio/design-practice",
-            img: ImageStrategy,
-            label: "Strategy and implementation of a Digital Design Practice"
-        },
-        {
             to: "/portfolio/ben-internet-banking",
             img: ImageBen,
             label: "Evolving Bendigo Bank’s internet banking app"
@@ -45,6 +40,11 @@ const PortfolioLinks = () => {
             to: "/portfolio/pursuit",
             img: ImagePursuit,
             label: "Creating an award-winning research news website for Australia's leading university"
+        },
+        {
+            to: "/portfolio/design-practice",
+            img: ImageStrategy,
+            label: "Strategy and implementation of a Digital Design Practice"
         },
         {
             to: "/portfolio/ben-digital-brand",
@@ -89,14 +89,14 @@ const PortfolioLinks = () => {
                     const active = index === activeIndex;
 
                     return (
-                        <div
-                            className={"img " +(active && 'is-active')}
+                        <img
+                            className={active && 'is-active'}
                             src={img}
                             alt="label"
                             style={{
                                 // transform: `translate(${x}px, ${y}px)`
-                                backgroundImage: `url(${img})`
-                                // left: `${x}px`
+                                top: `${y}px`,
+                                left: `${x}px`
                             }}
                         />
                     )
