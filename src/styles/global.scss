@@ -79,10 +79,17 @@ h1 {
   max-width: 1600px;
 }
 
+.current {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: fadeIn 0.5s ease-in-out 0.4s forwards;
+  max-width: 1200px;
+}
+
 .links {
   opacity: 0;
   transform: translateY(2rem);
-  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
+  animation: fadeIn 0.5s ease-in-out 0.6s forwards;
   max-width: 1200px;
 }
 

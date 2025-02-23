@@ -3,7 +3,7 @@ import React from "react"
 const IntroLinks = () => {
     return (
         <div>
-            <p>
+            <p className="current">
                 Currently leading design at <a href="//lyrebirdhealth.com" aria-label="Visit Lyrebird Health">Lyrebird Health</a>.
             </p>
             <p className="links">
