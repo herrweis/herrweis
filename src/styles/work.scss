@@ -145,6 +145,7 @@
     img, video {
         display: block;
         width: 100%;
+        height: auto;;
     }
 
     p {
@@ -161,6 +162,7 @@
     img, video {
         display: block;
         width: 15% !important;
+        height: auto;
         margin: 0 auto;
     }
 }
@@ -200,6 +202,7 @@
     img, video {
         display: block;
         width: 95%;
+        height: auto;;
     }
 }
 

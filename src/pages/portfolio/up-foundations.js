@@ -1,36 +1,29 @@
 import React from "react"
-import { Link } from "gatsby"
+import Head from 'next/head'
+
+import Logo from "../../components/Logo"
 import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
-import AnimatedCursor from "react-animated-cursor"
-import { isMobile } from "react-device-detect";
+// import AnimatedCursor from "react-animated-cursor"
+// import { isMobile } from "react-device-detect";
 
-import VideoSignup from "../../videos/up/signup.mp4"
-import SignupPoster from "../../videos/up/signup.jpg"
-import VideoNavigation from "../../videos/up/navigation.mp4"
-import NavigationPoster from "../../videos/up/navigation.jpg"
+import SignupPoster from "../../../public/images/videos/up/signup.jpg"
+import NavigationPoster from "../../../public/images/videos/up/navigation.jpg"
 
 
 export default function Page() {
   return (
     <div className="work">
+        <Head>
+            <title>Andreas Weis | Foundations for a new digital bank</title>
+          <meta name="description" content="At Up, we embraced a clean slate approach to challenge traditional banking interfaces, questioning conventional patterns and reimagining key interactions to lay the foundations for a new digital bank."/>
+        </Head>
         <div className="work-navigation">
-            <div className="logoWrapper">
-                <Link to="/">
-                    <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
-                        <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
-                        <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
-                        <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
-                    </svg>
-                </Link>
-            </div>
-            {/* <div className="work-navigation-links">
-                <Link to="/portfolio/ben-digital-brand" className="next">Next</Link>
-            </div> */}
+            <Logo />
         </div>
 
         <div className="work-text-large">
-            <p>Up’s mission to reinvent banking has always begun by questioning conventional patterns and embracing new ideas. With a clean slate, we had the freedom to innovate, reimagining key interactions and challenging assumptions about how banking interfaces should look and behave.</p>
+            <p>Up&apos;s mission to reinvent banking has always begun by questioning conventional patterns and embracing new ideas. With a clean slate, we had the freedom to innovate, reimagining key interactions and challenging assumptions about how banking interfaces should look and behave.</p>
         </div>
 
         <div className="work-meta">
@@ -53,12 +46,12 @@ export default function Page() {
         </div>
 
         <div className="media-full-width padding-bottom">
-            <VideoComponent src={VideoNavigation} poster={NavigationPoster} />
-            <p className="overlap">Up’s navigation moves away from the conventional bottom drawer layout, offering a more fluid, gesture-based approach. Users can swipe to move between different sections, making the app easy to use and efficient. The navigation labels are integrated into the page titles, keeping the interface clean and saving screen space. With no cumbersome screen transitions or loading delays, the app offers a smooth and seamless experience, allowing users to manage their finances effortlessly while maximizing screen usability.</p>
+            <VideoComponent src="/images/videos/up/navigation.mp4" poster={NavigationPoster.src} />
+            <p className="overlap">Up&apos;s navigation moves away from the conventional bottom drawer layout, offering a more fluid, gesture-based approach. Users can swipe to move between different sections, making the app easy to use and efficient. The navigation labels are integrated into the page titles, keeping the interface clean and saving screen space. With no cumbersome screen transitions or loading delays, the app offers a smooth and seamless experience, allowing users to manage their finances effortlessly while maximizing screen usability.</p>
         </div>
 
         <div className="media-full-width">
-            <VideoComponent src={VideoSignup} poster={SignupPoster} />
+            <VideoComponent src="/images/videos/up/signup.mp4" poster={SignupPoster.src} />
             <p className="overlap">↑ Realtime onboarding of customer number 17</p>
         </div>
 
@@ -76,7 +69,7 @@ export default function Page() {
             
             
         
-        {isMobile ? null : <AnimatedCursor
+        {/* {isMobile ? null : <AnimatedCursor
             innerSize={44}
             outerSize={0}
             innerScale={0.2}
@@ -85,20 +78,7 @@ export default function Page() {
             innerStyle={{
             backgroundColor: 'var(--bodyColor)'
             }}
-        />}
+        />} */}
     </div>
-  )
-}
-
-export function Head() {
-  return (
-      <>
-          <meta charSet="utf-8" />
-          <title>Andreas Weis | Foundations for a new digital bank</title>
-          <meta name="description" content="At Up, we embraced a clean slate approach to challenge traditional banking interfaces, questioning conventional patterns and reimagining key interactions to lay the foundations for a new digital bank."/>
-          <link rel="canonical" href="https://andreasweis.com" />
-          <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
-          <html lang="en" />
-      </>
   )
 }

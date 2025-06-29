@@ -1,44 +1,35 @@
 import React from "react"
-import { Link } from "gatsby"
+import Head from 'next/head'
+import Logo from "../../components/Logo"
 import VideoComponent from "../../components/VideoComponent"
 import PortfolioLinks from "../../components/PortfolioLinks"
-import AnimatedCursor from "react-animated-cursor"
-import { isMobile } from "react-device-detect";
+// import AnimatedCursor from "react-animated-cursor"
+// import { isMobile } from "react-device-detect";
 
-import VideoPoster from "../../videos/ben/poster.mp4"
-import PosterPoster from "../../videos/ben/poster.jpg"
-import VideoBalance from "../../videos/ben/balance.mp4"
-import BalancePoster from "../../videos/ben/balance.jpg"
-import VideoEvolution from "../../videos/ben/evolution.mp4"
-import EvolutionPoster from "../../videos/ben/evolution.jpg"
-import VideoSignup from "../../videos/ben/signup.mp4"
-import SignupPoster from "../../videos/ben/signup.jpg"
-import VideoLogoLoading from "../../videos/ben/logoLoading.mp4"
-import ImageAppScreens from "../../images/ben/appScreens.jpg"
-import ImageBigBang from "../../images/ben/bigBang.jpg"
-import ImageIconBar from "../../images/ben/iconBar.png"
+import Image from 'next/image'
+
+import PosterPoster from "../../../public/images/videos/ben/poster.jpg"
+import BalancePoster from "../../../public/images/videos/ben/balance.jpg"
+import EvolutionPoster from "../../../public/images/videos/ben/evolution.jpg"
+import SignupPoster from "../../../public/images/videos/ben/signup.jpg"
+import ImageAppScreens from "../../../public/images/ben/appScreens.jpg"
+import ImageBigBang from "../../../public/images/ben/bigBang.jpg"
+import ImageIconBar from "../../../public/images/ben/iconBar.png"
 
 
 export default function Page() {
   return (
     <div className="work">
+        <Head>
+            <title>Andreas Weis | Evolving Bendigo Bank&apos;s internet banking app</title>
+            <meta name="description" content="Evolving Bendigo Bank&apos;s internet banking app was a lot about taking what worked for Up and tailoring it for Bendigo Bank&apos;s unique (and very different to Up&apos;s) customer base."/>
+        </Head>
         <div className="work-navigation">
-            <div className="logoWrapper">
-                <Link to="/">
-                    <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
-                        <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
-                        <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
-                        <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
-                    </svg>
-                </Link>
-            </div>
-            {/* <div className="work-navigation-links">
-                <Link to="/portfolio/up-foundations" className="next">Next</Link>
-            </div> */}
+           <Logo />
         </div>
 
         <div className="work-text-large">
-            <p>Evolving Bendigo Bank’s internet banking app was a lot about taking what worked for Up and tailoring it for Bendigo Bank’s unique (and very different to Up’s) customer base.</p>
+            <p>Evolving Bendigo Bank&apos;s internet banking app was a lot about taking what worked for Up and tailoring it for Bendigo Bank&apos;s unique (and very different to Up&apos;s) customer base.</p>
             <p>Also to get rid of the 90s look.</p>
         </div>
 
@@ -62,10 +53,10 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <VideoComponent src={VideoPoster} poster={PosterPoster} />
+            <VideoComponent src="/images/videos/ben/poster.mp4" poster={PosterPoster.src} />
         </div>
         <div className="media-full-width">
-            <img src={ImageAppScreens} alt="Various Bendigo Internet Banking app screens" />
+            <Image src={ImageAppScreens} alt="Various Bendigo Internet Banking app screens" />
         </div>
         <div className="padding-top-bottom">
             <div className="two-cols-media-right">
@@ -73,32 +64,32 @@ export default function Page() {
                     <p className="overlap overlap-right">Showing only one balance at a time makes it easier to understand your finances at a glance, while still letting customers choose which balance they prefer to view</p>
                 </div>
                 <div>
-                    <VideoComponent src={VideoBalance} poster={BalancePoster} />
+                    <VideoComponent src="/images/videos/ben/balance.mp4" poster={BalancePoster.src} />
                 </div>
             </div>
             <div className="media-full-width padding-top">
-                <img src={ImageIconBar} alt="Various colourful icons" />
+                <Image src={ImageIconBar} alt="Various colourful icons" />
             </div>
         </div>
         <div className="media-full-width">
-            <VideoComponent src={VideoSignup} poster={SignupPoster} />
+            <VideoComponent src="/images/videos/ben/signup.mp4" poster={SignupPoster.src} />
             <p className="overlap">Increasing new customer sign-ups by offering a fully digital, seamless experience that allows you to become a customer faster than ordering and drinking your flat white.</p>
         </div>
         <div className="media-15-width padding-top-bottom-large">
-            <VideoComponent src={VideoLogoLoading} />
+            <VideoComponent src="/images/videos/ben/logoLoading.mp4" />
         </div>
         <div className="media-full-width">
-            <img src={ImageBigBang} alt="Comparison of old and new app design" />
+            <Image src={ImageBigBang} alt="Comparison of old and new app design" width={"auto"}/>
             <div className="padding-top-bottom">
                 <p className="overlap">In anticipation of potential negative feedback, we planned to introduce the new design gradually to our change-resistant user base. Instead of a big bang rollout, we opted for implementing small, incremental updates over time, allowing users to adapt more comfortably and ensuring a smoother transition to the new design.</p>
                 <p className="overlap">Evolution instead of revolution.</p>
             </div>
         </div>
         <div className="media-full-width">
-            <VideoComponent src={VideoEvolution} poster={EvolutionPoster} />
+            <VideoComponent src="/images/videos/ben/evolution.mp4" poster={EvolutionPoster.src} />
         </div>
         <div className="work-text-large padding-top">
-            <p>The new designs sparked a completely new app strategy, but due to technological limitations, building on the existing app wasn’t feasible. Instead, the designs now form the foundation for a brand-new app, currently in development, utilizing Up’s technology.</p>
+            <p>The new designs sparked a completely new app strategy, but due to technological limitations, building on the existing app wasn&apos;t feasible. Instead, the designs now form the foundation for a brand-new app, currently in development, utilizing Up&apos;s technology.</p>
             <p>♥</p>
         </div>
             
@@ -107,7 +98,7 @@ export default function Page() {
             
             
         
-        {isMobile ? null : <AnimatedCursor
+        {/* {isMobile ? null : <AnimatedCursor
             innerSize={44}
             outerSize={0}
             innerScale={0.2}
@@ -116,20 +107,7 @@ export default function Page() {
             innerStyle={{
             backgroundColor: 'var(--bodyColor)'
             }}
-        />}
+        />} */}
     </div>
-  )
-}
-
-export function Head() {
-  return (
-      <>
-          <meta charSet="utf-8" />
-          <title>Andreas Weis | Evolving Bendigo Bank’s internet banking app</title>
-          <meta name="description" content="Evolving Bendigo Bank’s internet banking app was a lot about taking what worked for Up and tailoring it for Bendigo Bank’s unique (and very different to Up’s) customer base."/>
-          <link rel="canonical" href="https://andreasweis.com" />
-          <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
-          <html lang="en" />
-      </>
   )
 }

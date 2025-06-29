@@ -1,14 +1,14 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import Link  from "next/link"
 import { isMobile } from "react-device-detect";
 
-import ImageStrategy from "../../images/previews/strategy.jpg"
-import ImageBen from "../../images/previews/ben.jpg"
-import ImageUp from "../../images/previews/up.jpg"
-import ImageBrand from "../../images/previews/brand.jpg"
-import ImageProductStrat from "../../images/previews/productstrat.jpg"
-import ImagePursuit from "../../images/previews/pursuit.jpg"
-import ImageUnimelb from "../../images/previews/unimelb.jpg"
+import ImageStrategy from "../../../public/images/previews/strategy.jpg"
+import ImageBen from "../../../public/images/previews/ben.jpg"
+import ImageUp from "../../../public/images/previews/up.jpg"
+import ImageBrand from "../../../public/images/previews/brand.jpg"
+import ImageProductStrat from "../../../public/images/previews/productstrat.jpg"
+import ImagePursuit from "../../../public/images/previews/pursuit.jpg"
+import ImageUnimelb from "../../../public/images/previews/unimelb.jpg"
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = React.useState({x: 0, y: 0});
@@ -25,6 +25,7 @@ const useMousePosition = () => {
 
 
 const PortfolioLinks = () => {
+
 
     const Navigation = [
         {
@@ -73,8 +74,8 @@ const PortfolioLinks = () => {
                 <ul>
                     {
                         Navigation.map(({to, img, label}, index ) => (
-                            <li>
-                                <Link to={to}
+                            <li key={index}>
+                                <Link href={to}
                                     onMouseEnter={()=>setActiveIndex(index)}
                                     onMouseLeave={()=>setActiveIndex(-1)}
                                 >
@@ -92,9 +93,10 @@ const PortfolioLinks = () => {
 
                     return (
                         <img
-                            className={active && 'is-active'}
-                            src={img}
+                            className={(active ? 'is-active' : 'hidden')}
+                            src={img.src}
                             alt="label"
+                            key={index}
                             style={{
                                 // transform: `translate(${x}px, ${y}px)`
                                 top: `${y}px`,

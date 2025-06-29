@@ -1,35 +1,31 @@
 import React from "react"
-import { Link } from "gatsby"
+import Head from 'next/head'
+
+import Logo from "../../components/Logo"
 import PortfolioLinks from "../../components/PortfolioLinks"
-import AnimatedCursor from "react-animated-cursor"
-import { isMobile } from "react-device-detect";
+// import AnimatedCursor from "react-animated-cursor"
+// import { isMobile } from "react-device-detect";
 
+import Image from 'next/image'
 
-import ImageHeader from "../../images/pursuit/header_devices.jpg"
-import ImagePhone from "../../images/pursuit/Phone Picture.jpg"
-import ImageWall from "../../images/pursuit/The Wall.gif"
+import ImageHeader from "../../../public/images/pursuit/header_devices.jpg"
+import ImagePhone from "../../../public/images/pursuit/Phone Picture.jpg"
+import ImageWall from "../../../public/images/pursuit/The Wall.gif"
 
 
 export default function Page() {
   return (
     <div className="work">
+        <Head>
+            <title>Andreas Weis | Creating an award-winning research news website for Australia&apos;s leading university</title>
+            <meta name="description" content="Design leader with 23+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+        </Head>
         <div className="work-navigation">
-            <div className="logoWrapper">
-                <Link to="/">
-                    <svg ariaLabelledby="description" className="logo" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 70" xmlSpace="preserve">
-                        <description>Logo of andreasweis.com. Two lines mimmicking an infinity symbol that it broken up in the middle.</description>
-                        <path d="M55.42,56.15L8.83,5.32C7.21,3.56,4.28,4.71,4.28,7.09v48.29c0,2.12,2.39,3.36,4.13,2.14l16.63-12.25"/>
-                        <path d="M32.96,5.24l47.5,51.9c1.61,1.76,4.55,0.62,4.55-1.77V7.09c0-2.12-2.39-3.36-4.13-2.14L64.25,17.21"/>
-                    </svg>
-                </Link>
-            </div>
-            {/* <div className="work-navigation-links">
-                <Link to="/portfolio/unimelb-design" className="next">Next</Link>
-            </div> */}
+            <Logo />
         </div>
 
         <div className="work-text-large">
-            <p>Making research, insights and expert commentary from Australia's most prestigious university accessible to everyone.</p>
+            <p>Making research, insights and expert commentary from Australia&apos;s most prestigious university accessible to everyone.</p>
         </div>
 
         <div className="work-meta">
@@ -52,7 +48,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={ImageHeader} alt="Mockup of the website" />
+            <Image src={ImageHeader} alt="Mockup of the website" />
         </div>
 
         <div className="work-text padding-top-bottom">
@@ -61,7 +57,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={ImagePhone} alt="Mockup of the website on a mobile phone" />
+            <Image src={ImagePhone} alt="Mockup of the website on a mobile phone" />
         </div>
 
         <div className="work-text padding-top-bottom">
@@ -69,7 +65,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <img src={ImageWall} alt="animation of several stages of user testing" />
+            <Image src={ImageWall} alt="animation of several stages of user testing" />
         </div>
 
         <div className="work-text padding-top">
@@ -77,8 +73,8 @@ export default function Page() {
         </div>
 
         <div className="work-text-large">
-            {/* <p>More than 1,200 academics have contributed to Pursuit, covering a wide range of topics that showcase the university’s cutting-edge research. The platform’s ability to bring complex research to the public in an accessible way, using multimedia tools like enhanced graphics, videos, and podcasts, has helped it attract a growing readership</p> */}
-            {/* <p>Pursuit is now (*2015 at the time) one of the University’s most successful web properties, delivering over 2.2 million article views to over 725,000 unique visitors in the 6 months since it launched.</p> */}
+            {/* <p>More than 1,200 academics have contributed to Pursuit, covering a wide range of topics that showcase the university&apos;s cutting-edge research. The platform&apos;s ability to bring complex research to the public in an accessible way, using multimedia tools like enhanced graphics, videos, and podcasts, has helped it attract a growing readership</p> */}
+            {/* <p>Pursuit is now (*2015 at the time) one of the University&apos;s most successful web properties, delivering over 2.2 million article views to over 725,000 unique visitors in the 6 months since it launched.</p> */}
             <p>♥</p>
         </div>
             
@@ -87,7 +83,7 @@ export default function Page() {
             
             
         
-        {isMobile ? null : <AnimatedCursor
+        {/* {isMobile ? null : <AnimatedCursor
             innerSize={44}
             outerSize={0}
             innerScale={0.2}
@@ -96,20 +92,7 @@ export default function Page() {
             innerStyle={{
             backgroundColor: 'var(--bodyColor)'
             }}
-        />}
+        />} */}
     </div>
-  )
-}
-
-export function Head() {
-  return (
-      <>
-          <meta charSet="utf-8" />
-          <title>Andreas Weis | Portfolio | Product Design Leadership</title>
-          <meta name="description" content="Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
-          <link rel="canonical" href="https://andreasweis.com" />
-          <link rel="stylesheet" href="https://use.typekit.net/ztd8wlb.css"></link>
-          <html lang="en" />
-      </>
   )
 }
