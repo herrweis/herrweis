@@ -4,7 +4,7 @@ import React from "react"
 const Intro = () => {
     return (
         <p className="intro">
-            Experienced design leader with 15+ years creating and leading diverse teams, and 23+ years as a multidisciplinary designer; based in Melbourne/Narrm; making the uncomfortable comfortable.
+            Designer, maker, and collaborator with 23+ years of experience creating digital products, strategies, and teams that matter. Based in Melbourne/Narrm, currently exploring independent and fractional opportunities where I can help build awesome things.
         </p>
     )
 

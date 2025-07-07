@@ -33,15 +33,15 @@ export default function Page() {
       <Tabs>
         <TabList>
           <Tab>Work</Tab>
-          <Tab>About</Tab>
+          {/* <Tab>About</Tab> */}
           <Tab>Expertise</Tab>
         </TabList>
         <TabPanel>
           <PortfolioLinks />
         </TabPanel>
-        <TabPanel>
+        {/* <TabPanel>
           <About />
-        </TabPanel>
+        </TabPanel> */}
         <TabPanel>
           <Expertise />
         </TabPanel>

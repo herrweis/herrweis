@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://andreasweis.com/sitemap-index.xml
+Host: https://andreasweis.com
