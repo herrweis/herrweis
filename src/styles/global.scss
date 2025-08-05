@@ -3,7 +3,8 @@
   --bodyColor: black;
   --backgroundColor: white;
   // --highlightColor: #00E3B4;
-  --defaultFontSize: calc(16px + (40 - 20) * ((100vw - 100px) / (1980 - 100)));
+  --defaultFontSize: calc(14px + (36 - 20) * ((100vw - 300px) / (1980 - 300)));
+  // --defaultFontSize: font-size: clamp(14px, 10vw, 40px);
 }
 
 html {
@@ -76,6 +77,7 @@ h1 {
   opacity: 0;
   transform: translateY(2rem);
   animation: fadeIn 0.5s ease-in-out 0.2s forwards;
+  text-wrap: balance;
   max-width: 1600px;
 }
 
@@ -90,7 +92,8 @@ h1 {
   opacity: 0;
   transform: translateY(2rem);
   animation: fadeIn 0.5s ease-in-out 0.6s forwards;
-  max-width: 1600px;
+  // text-wrap: balance;
+  // max-width: 1600px;
 }
 
 a {
