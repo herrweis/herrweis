@@ -11,6 +11,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import About from "../components/About"
 import Expertise from "../components/Expertise"
 import PortfolioLinks from "../components/PortfolioLinks"
+import FieldnotesLinks from "../components/FieldnotesLinks"
 
 // import setBodyColors from "../components/setBodyColors"
 // import Humanize from "../components/humanize"
@@ -32,10 +33,13 @@ export default function Page() {
       <IntroLinks />
       <Tabs>
         <TabList>
+          <Tab>Field notes</Tab>
           <Tab>Work</Tab>
-          {/* <Tab>About</Tab> */}
           <Tab>Expertise</Tab>
         </TabList>
+        <TabPanel>
+          <FieldnotesLinks />
+        </TabPanel>
         <TabPanel>
           <PortfolioLinks />
         </TabPanel>
