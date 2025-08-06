@@ -3,7 +3,7 @@
   --bodyColor: black;
   --backgroundColor: white;
   // --highlightColor: #00E3B4;
-  --defaultFontSize: calc(14px + (36 - 20) * ((100vw - 300px) / (1980 - 300)));
+  --defaultFontSize: calc(17px + (36 - 20) * ((100vw - 300px) / (1980 - 300)));
   // --defaultFontSize: font-size: clamp(14px, 10vw, 40px);
 }
 
@@ -126,7 +126,7 @@ a {
 }
 
 .react-tabs__tab {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   transition: all 0.2s;
   padding: 0.3rem 0.9rem;
   border-radius: 0.2rem;
