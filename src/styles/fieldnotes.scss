@@ -84,8 +84,12 @@ h3 {
         position: relative;
 
         .work-text {
-            padding: 0 22% 1rem 24%;
+            padding: 55px 10% 1rem 10%;
             // background-color: "#dae9c2";
+
+            @media screen and (min-width: 920px) {
+                padding: 0 22% 1rem 24%;
+            }
         }
 
         p.highlight {
@@ -94,7 +98,7 @@ h3 {
 
         h3 {
             padding: 10% 50% 0 1rem;
-            font-size: 3rem;
+            font-size: 2rem;
             line-height: 1;
             position: absolute;
             // bottom: 0;
@@ -102,6 +106,7 @@ h3 {
             @media screen and (min-width: 920px) {
                 top: 50%;
                 transform: translateY(-50%);
+                font-size: 3rem;
             }
         }
     }
