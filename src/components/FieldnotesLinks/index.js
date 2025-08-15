@@ -16,7 +16,7 @@ const FieldnotesLinks = () => {
             label: "What you get with a fractional design lead (and what you don’t)"
         },
         {
-            to: "https://swift-yttrium-b7a.notion.site/You-do-not-need-a-design-system-You-need-a-designer-who-gives-a-shit-2469856d8f28802e8134cf4be62275bc",
+            to: "/fieldnotes/you-do-not-need-a-design-system-you-need-a-designer-who-gives-a-shit",
             label: "You do not need a design system. You need a designer who gives a shit"
         },
         

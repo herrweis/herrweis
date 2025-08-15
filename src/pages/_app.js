@@ -1,6 +1,7 @@
 import '../styles/font.css'
 import '../styles/global.scss'
 import '../styles/work.scss'
+import '../styles/fieldnotes.scss'
 import { AppProps } from 'next/app'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
