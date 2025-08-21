@@ -236,3 +236,236 @@ h3 {
         }
     }
 }
+
+
+.roi {
+    padding: 0 0.5rem 1rem 0.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    h1 {
+        font-family: "neue-haas-grotesk-display", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        display: block;
+    }
+
+    h2, h3, .roi-intro p, p.end {
+        font-family: "neue-haas-grotesk-display", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }
+
+    p {
+        font-family: "neue-haas-grotesk-text", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        padding: 0 1rem 2rem 1rem;
+
+        .header-img {
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .header-content {
+            
+        }
+
+        h1 {
+            line-height: 1.1;
+            font-size: 4rem;
+        }
+    }
+
+    section {
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    @media screen and (min-width: 980px) {
+
+        .two-cols {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            
+            > div {
+                box-sizing: border-box;
+                flex: 1;
+            }
+
+            p {
+                font-size: 0.7rem;
+                line-height: 1.3;
+                margin: 0 0 1.5rem 0;
+            }
+
+            p:first-child,
+            h2:first-child {
+                margin-top: 0;
+            }
+
+            p:last-child,
+            h2:last-child {
+                margin-bottom: 0;
+            }
+
+            .right-align {
+                text-align: right;
+            }
+
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+
+            &.end {
+                align-items: flex-end;
+            }
+
+            &.thirds .two-col-img {
+                flex: 0.5;
+            }
+        }
+
+        header {
+            padding-top: 2rem;
+
+            .header-content {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 2rem;
+
+                h1 {
+                    flex: 1;
+                    line-height: 1;
+                    font-size: 4rem;
+                    margin: 0 0 -2rem 0;
+                    max-width: 600px;
+
+                    span {
+                        display: block;
+                        color: var(--backgroundColor);
+                    }
+                }
+
+                div {
+                    flex: 1;
+                    aspect-ratio: 1 / 1;
+                    max-width: 48%;
+
+                    display: flex;
+                    align-items: flex-end;
+
+                    p {
+                        margin: 0;
+                        line-height: 1.3;
+                    }
+                }
+            }
+        }
+
+        .roi-up {
+            .two-col-img img {
+                width: 85%;
+            }
+        }
+
+        .roi-soul {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+        .roi-alternative {
+            padding-bottom: 8rem;
+        }
+
+        .roi-table {
+            padding-bottom: 8rem;
+
+            .stretch {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .two-col-img {
+                width: 60%;
+            }
+        }
+
+        .roi-bets {
+            position: relative;
+
+            .header-img {
+                margin: 0 -1rem -25% -1rem;
+            }
+
+            h2 {
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 4rem;
+                line-height: 0.9;
+                width: 70%;
+            }
+        }
+
+        .roi-hypocrisy {
+            padding-top: 4rem;
+            padding-bottom: 8rem;
+
+            .right-align {
+                border-top: 0.5rem solid var(--bodyColor);
+                display: flex;
+                justify-items: flex-end;
+                align-items: flex-end;
+
+                h2 {
+                    font-family: "neue-haas-grotesk-display", sans-serif;
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 4.5rem;
+                    line-height: 1;
+                    transform: translateY(0.6rem);
+                    color: #C71827;
+                }
+            }
+        }
+
+        .roi-rigor {
+            background-color: #000101;
+            color: var(--backgroundColor);
+
+            h2 {
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 2.5rem;
+                line-height: 1.2;
+                padding: 0 1rem;
+            }
+
+            .two-cols {
+                padding: 0 1rem 3rem 1rem;
+                align-items: flex-end;
+            }
+
+            .end {
+                padding: 5rem 0 3rem 0;
+            }
+        }
+    }
+}
