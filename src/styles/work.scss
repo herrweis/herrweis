@@ -82,6 +82,32 @@
             padding-left: 0.5rem;
             content: " →";
         }
+
+        .meta {
+            font-size: .7rem;
+            border: 2px solid var(--bodyColor);
+            padding: 0.2rem 0.5rem;
+            margin-left: 1rem;
+            border-radius: 0.2rem;
+            display: inline-block;
+
+            svg {
+                width: 0.6rem;
+                height: auto;
+                vertical-align: middle;
+                display: inline-block;
+                line-height: 0;
+                transform: translateY(-0.05rem);
+            }
+
+            .type {
+                font-weight: 600;
+            }
+
+            .length {
+                font-style: italic;
+            }
+        }
     }
 }
 .work {

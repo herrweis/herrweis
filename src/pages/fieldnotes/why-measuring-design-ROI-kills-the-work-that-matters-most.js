@@ -24,6 +24,7 @@ export default function Page() {
         </Head>
         <div className="work-navigation">
            <Logo />
+           <div className="reading-time">~7 minute read</div>
         </div>
 
         <header style={{ backgroundImage: `url(${ImageHeader.src})` }}>
@@ -46,10 +47,9 @@ export default function Page() {
                 <h2>The best design decisions often cannot be justified upfront.</h2>
             </div>
             <div>
-                <p>At Up one developer noticed that we didn't need pull-to-refresh anymore as we kept the screen automatically up to date. But everyone kept pulling down to refresh out of habit, even when there was nothing new to load. So for Friday demo day, he built a little interaction where pulling down far enough would fling a coin into your savings.</p>
-                <p>Lots of cheering. It was so much fun.</p>
-                <p>Turning a pointless gesture into something useful and playful.</p>
-                <p>He then spent a few weeks refining it with a designer. No business case. No A/B test plan. No measurable ROI beyond "people seem to love this." And they do love it. It is one of those details people tell their friends about. The kind of thing that makes a product stick in your memory.</p>
+                <p>When we built Up, we kept all transaction screens automatically up to date, so the very common pull-to-refresh interaction became superfluous. Yet everyone kept doing it. One developer picked up on this and, for our Friday morning demos, built a little interaction where pulling down far enough would fling a coin into your savings.</p>
+                <p>Lots of cheering. We all loved this instantly.<br/>Turning a pointless gesture into something useful and playful.</p>
+                <p>He then spent a few weeks refining it with a designer. No business case. No A/B test plan. No measurable ROI beyond "<em>people seem to love this.</em>" And they do love it. It is one of those details people tell their friends about. The kind of thing that makes a product stick in your memory.</p>
                 <p>But try getting that approved in most companies today. Suggest spending a month on something with no guaranteed metric and you will get shut down before you finish the sentence.</p>
             </div>
         </section>
@@ -70,7 +70,7 @@ export default function Page() {
 
         <section className="roi-alternative two-cols">
             <div className="right-align">
-                <h2>Meanwhile, we all know the alternative.</h2>
+                <h2>ROI doesn’t care if you hate it.</h2>
             </div>
             <div>
                 <p>Everyone has that piece of enterprise software they hate using with a passion. The thing that probably has incredible engagement metrics and retention rates because what choice do you have?</p>
@@ -87,7 +87,7 @@ export default function Page() {
                 </div>
             </div>
             <div>
-                <p>Scroll through design LinkedIn right now and you will see the same post over and over. "Design needs to speak business language." "From craft to impact: how we used our design system to save $240k." "Design isn’t about making things pretty — it’s about driving growth."</p>
+                <p>Scroll through design LinkedIn right now and you will see the same post over and over.<br/>"<em>Design needs to speak business language.</em>"<br/>"<em>From craft to impact: how we used our design system to save $240k.</em>"<br/>"<em>Design isn’t about making things pretty — it’s about driving growth.</em>"</p>
                 <p>Everyone is so desperate to prove design belongs in strategy conversations that they have forgotten what design actually brings to strategy. It is not another way to think about conversion funnels. It is the thing that helps you escape the conversion funnel mentality entirely.</p>
                 <p>Design's superpower is noticing what everyone else misses. Seeing opportunities for delight in mundane interactions. Choosing humanity over optimisation. Making products that people actually want to use rather than just tolerate.</p>
                 <p>But somewhere along the way, we decided that to be taken seriously, we had to talk like product managers. Measure like growth teams. Justify like finance departments.</p>
@@ -108,7 +108,8 @@ export default function Page() {
                     <p>The irony is that these unmeasurable investments often deliver the most lasting value. They just will not show up in next month's report.</p>
                 </div>
                 <div>
-                    <p>If you demand ROI calculations for every design decision, you are not getting strategic design input. You are getting risk-averse execution that looks like everything else in your category. Sometimes the best thing you can do is notice something weird about how people behave and build something delightful around it. Sometimes you need to make a bet on joy rather than metrics.</p>
+                    <p>If you demand ROI calculations for every design decision, you are not getting strategic design input. You are getting risk-averse execution that looks like everything else in your category. Sometimes the best thing you can do is notice something weird about how people behave and build something delightful around it.</p>
+                    <p>Sometimes you need to make a bet on joy rather than metrics.</p>
                     <p>That takes a little faith. But it is often the difference between a product people have to use and one they actually want to.</p>
                 </div>
             </div>
