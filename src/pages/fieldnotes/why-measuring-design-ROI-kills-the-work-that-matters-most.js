@@ -9,6 +9,7 @@ import ImageHuman from "../../../public/images/fieldnotes/roi/human.jpg"
 import ImagePhone from "../../../public/images/fieldnotes/roi/phone.jpg"
 import ImageRover from "../../../public/images/fieldnotes/roi/rover.jpg"
 import ImageSmiley from "../../../public/images/fieldnotes/roi/smiley.jpg"
+import ImageOG from "../../../public/images/og/roi.jpg"
 
 
 export default function Page() {
@@ -19,9 +20,9 @@ export default function Page() {
             <title>Why measuring design ROI kills the work that matters most</title>
             <meta name="description" content="When every design decision has to justify itself with ROI, the work that actually makes people love your product never gets made. This article explores why the best ideas often look like waste. Until they become the thing everyone remembers."/>
             <meta name="og:description" content="When every design decision has to justify itself with ROI, the work that actually makes people love your product never gets made. This article explores why the best ideas often look like waste. Until they become the thing everyone remembers."/>
-            <meta property="og:image" content={ImagePhone.src} />
-            <meta property="og:image:width" content="1024" />
-            <meta property="og:image:height" content="1024" />
+            <meta property="og:image" content={ImageOG.src} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
             <style>
                 @import url("https://use.typekit.net/pob2svw.css");
             </style>
