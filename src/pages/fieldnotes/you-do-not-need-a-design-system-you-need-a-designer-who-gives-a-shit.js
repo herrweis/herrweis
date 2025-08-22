@@ -23,7 +23,11 @@ export default function Page() {
     <div className="fieldnote designsystem" style={{backgroundColor: "#c4e1f1"}}>
         <Head>
             <title>You do not need a design system. You need a designer who gives a shit</title>
-            <meta name="description" content="You do not need a design system. You need a designer who gives a shit"/>
+            <meta name="description" content="Chasing structure too early slows you down. Before you hire a Head of Design or spin up a design system, make sure you’re solving the real problem, not just the vibe."/>
+            <meta name="og:description" content="Chasing structure too early slows you down. Before you hire a Head of Design or spin up a design system, make sure you’re solving the real problem, not just the vibe."/>
+            <meta property="og:image" content={ImageBurning.src} />
+            <meta property="og:image:width" content="1980" />
+            <meta property="og:image:height" content="1080" />
             <style>
                 @import url("https://use.typekit.net/roq0vxo.css?bla=new");
             </style>

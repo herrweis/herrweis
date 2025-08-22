@@ -1,5 +1,6 @@
 import React from "react"
 import Head from 'next/head'
+import Image from 'next/image'
 
 import Logo from "../components/Logo"
 
@@ -13,6 +14,8 @@ import Expertise from "../components/Expertise"
 import PortfolioLinks from "../components/PortfolioLinks"
 import FieldnotesLinks from "../components/FieldnotesLinks"
 
+import ImageOG from "../../public/images/og/home.png"
+
 // import setBodyColors from "../components/setBodyColors"
 // import Humanize from "../components/humanize"
 // let getAJobText = "I have been designing and developing digital and physical things for over <Humanize number={(new Date().getFullYear() - 2002)} /> years."
@@ -25,6 +28,10 @@ export default function Page() {
       <Head>
           <title>Andreas Weis | Product Design Leadership</title>
           <meta name="description" content="Design leader with 23+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+          <meta name="og:description" content="Design leader with 23+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams"/>
+          <meta property="og:image" content={ImageOG.src} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
       </Head>
       <h1>Andreas Weis</h1>
       <Logo />

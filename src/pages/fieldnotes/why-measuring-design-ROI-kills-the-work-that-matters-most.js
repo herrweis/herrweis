@@ -17,7 +17,11 @@ export default function Page() {
     <div className="fieldnote roi">
         <Head>
             <title>Why measuring design ROI kills the work that matters most</title>
-            <meta name="description" content="Why measuring design ROI kills the work that matters most"/>
+            <meta name="description" content="When every design decision has to justify itself with ROI, the work that actually makes people love your product never gets made. This article explores why the best ideas often look like waste. Until they become the thing everyone remembers."/>
+            <meta name="og:description" content="When every design decision has to justify itself with ROI, the work that actually makes people love your product never gets made. This article explores why the best ideas often look like waste. Until they become the thing everyone remembers."/>
+            <meta property="og:image" content={ImagePhone.src} />
+            <meta property="og:image:width" content="1024" />
+            <meta property="og:image:height" content="1024" />
             <style>
                 @import url("https://use.typekit.net/pob2svw.css");
             </style>
