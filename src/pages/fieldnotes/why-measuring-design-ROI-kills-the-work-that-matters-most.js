@@ -9,6 +9,7 @@ import ImageHuman from "../../../public/images/fieldnotes/roi/human.jpg"
 import ImagePhone from "../../../public/images/fieldnotes/roi/phone.jpg"
 import ImageRover from "../../../public/images/fieldnotes/roi/rover.jpg"
 import ImageSmiley from "../../../public/images/fieldnotes/roi/smiley.jpg"
+import ImageBackgroundGrid from "../../../public/images/fieldnotes/roi/backgroundgrid.png"
 import ImageOG from "../../../public/images/og/roi.jpg"
 
 
