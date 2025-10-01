@@ -53,7 +53,7 @@ export default function Page() {
         </div>
 
         <div className="media-full-width">
-            <VideoComponent src="/images/videos/ben/poster.mp4" poster={PosterPoster.src} />
+            <VideoComponent sources={[{ src: "/images/videos/ben/poster.mp4", type: "video/mp4" }]} poster={PosterPoster.src} />
         </div>
         <div className="media-full-width">
             <Image src={ImageAppScreens} alt="Various Bendigo Internet Banking app screens" />
@@ -64,7 +64,7 @@ export default function Page() {
                     <p className="overlap overlap-right">Showing only one balance at a time makes it easier to understand your finances at a glance, while still letting customers choose which balance they prefer to view</p>
                 </div>
                 <div>
-                    <VideoComponent src="/images/videos/ben/balance.mp4" poster={BalancePoster.src} />
+                    <VideoComponent sources={[{ src: "/images/videos/ben/balance.mp4", type: "video/mp4" }]} poster={BalancePoster.src} />
                 </div>
             </div>
             <div className="media-full-width padding-top">
@@ -72,11 +72,11 @@ export default function Page() {
             </div>
         </div>
         <div className="media-full-width">
-            <VideoComponent src="/images/videos/ben/signup.mp4" poster={SignupPoster.src} />
+            <VideoComponent sources={[{ src: "/images/videos/ben/signup.mp4", type: "video/mp4" }]} poster={SignupPoster.src} />
             <p className="overlap">Increasing new customer sign-ups by offering a fully digital, seamless experience that allows you to become a customer faster than ordering and drinking your flat white.</p>
         </div>
         <div className="media-15-width padding-top-bottom-large">
-            <VideoComponent src="/images/videos/ben/logoLoading.mp4" />
+            <VideoComponent sources={[{ src: "/images/videos/ben/logoLoading.mp4", type: "video/mp4" }]} />
         </div>
         <div className="media-full-width">
             <Image src={ImageBigBang} alt="Comparison of old and new app design" width={"auto"}/>
@@ -86,7 +86,7 @@ export default function Page() {
             </div>
         </div>
         <div className="media-full-width">
-            <VideoComponent src="/images/videos/ben/evolution.mp4" poster={EvolutionPoster.src} />
+            <VideoComponent sources={[{ src: "/images/videos/ben/evolution.mp4", type: "video/mp4" }]} poster={EvolutionPoster.src} />
         </div>
         <div className="work-text-large padding-top">
             <p>The new designs sparked a completely new app strategy, but due to technological limitations, building on the existing app wasn&apos;t feasible. Instead, the designs now form the foundation for a brand-new app, currently in development, utilizing Up&apos;s technology.</p>

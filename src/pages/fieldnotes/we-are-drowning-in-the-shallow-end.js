@@ -34,7 +34,18 @@ export default function Page() {
         <article>
           <section className="intro">
               <div className="video-container">
-                <VideoComponent src="../images/fieldnotes/shallow/header.mp4" poster={ImageHeaderPoster.src} />
+                <VideoComponent
+                  sources={[
+                    { src: "../images/fieldnotes/shallow/header_SD.webm", type: "video/webm", media: "(max-width: 1280px)" },
+                    { src: "../images/fieldnotes/shallow/header_SD.mp4", type: "video/mp4", media: "(max-width: 1280px)" },
+
+                    // HD for everything else
+                    { src: "../images/fieldnotes/shallow/header_HD.webm", type: "video/webm" },
+                    { src: "../images/fieldnotes/shallow/header_HD.mp4", type: "video/mp4" },
+                    ]}
+                  poster={ImageHeaderPoster.src}
+                  alt="Oceanwaves crashing onto a beach"
+                />
                 <div className="h1-container">
                   <Parallax translateY={[-120, 80]}>
                     <h1><span>We are drowning in the shallow end</span></h1>
@@ -104,7 +115,18 @@ export default function Page() {
             </section>
           </div>
           <section className="video-gradient">
-              <VideoComponent src="../images/fieldnotes/shallow/gradient.mp4" poster={ImageGradientPoster.src} />
+              <VideoComponent
+                  sources={[
+                    { src: "../images/fieldnotes/shallow/gradient_SD.webm", type: "video/webm", media: "(max-width: 1280px)" },
+                    { src: "../images/fieldnotes/shallow/gradient_SD.mp4", type: "video/mp4", media: "(max-width: 1280px)" },
+
+                    // HD for everything else
+                    { src: "../images/fieldnotes/shallow/gradient_HD.webm", type: "video/webm" },
+                    { src: "../images/fieldnotes/shallow/gradient_HD.mp4", type: "video/mp4" },
+                    ]}
+                  poster={ImageGradientPoster.src}
+                  alt="Water surfeace with light refractions"
+                />
           </section>
           <div className="bottom-gradient">
             <section className="text-content body-copy">
@@ -120,7 +142,7 @@ export default function Page() {
               <p>When the neo-bank wave kicked off, it felt like a gold rush. Competitors were racing to get products out and piling on features. At Up, we took a different approach. We invested in quality, the system, the craft, the clarity of the experience. That foundation gave us the ability to ship to production five times a day.</p>
               <p>Most of the competition that started with us disappeared. Up is still here because we chose quality and depth over shipping the most features first.</p>
               <p>Depth did not slow us down. It is what made sustainable speed possible.</p>
-              <p><em>I wonder what Dieter thinks about Liquid Glass.</em></p>
+              <p>I wonder what Dieter thinks about Liquid Glass.</p>
             </section>
           </div>
         </article>

@@ -2,13 +2,13 @@ import React, { CSSProperties, useCallback, useEffect, useRef } from "react";
 import { useIsVisible } from "../../hooks/useIsVisible";
 
 type VideoComponentProps = {
-  src: string;
+  sources: { src: string; type: string; media?: string }[]; // allow multiple sources
   poster?: string;
   alt?: string;
   style?: CSSProperties;
 };
 export const VideoComponent = ({
-  src,
+  sources,
   poster,
   style,
   alt,
@@ -74,7 +74,9 @@ export const VideoComponent = ({
           ...style,
         }}
       >
-        <source src={src} type="video/mp4" />
+        {sources.map((s, idx) => (
+          <source key={idx} src={s.src} type={s.type} media={s.media} />
+        ))}
         Your browser does not support the video tag. Please try viewing this
         page in a modern browser.
       </video>

@@ -531,13 +531,13 @@ h3 {
 
         h1 {
             display: block;
-            margin-top: -4rem;
+            margin-top: -3rem;
 
             span {
                 line-height: 1;
                 background: rgba(255, 255, 255, 0.1);
                 box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.5),
-                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
                 color: rgba(255, 255, 255, 0.85);
                 backdrop-filter: blur(4px);
                 backdrop-filter: url(#filter);
@@ -545,7 +545,7 @@ h3 {
                 display: inline-block;
                 // width: 75%;
                 box-sizing: border-box;
-                font-size: 1rem;
+                font-size: 0.75rem;
                 padding: 1.5rem 2rem;
                 border-radius: 10.2vmin 9.8vmin 10.2vmin 9.8vmin;
                 text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -560,7 +560,7 @@ h3 {
             }
 
             h1 {
-                margin-top: -0;
+                margin-top: 0;
             }
 
             h1 span {
@@ -571,6 +571,7 @@ h3 {
         .header-content{
             position: relative;
             z-index: 0;
+            margin-top: -1px;
         }
 
         p {
@@ -607,8 +608,7 @@ h3 {
         }
 
         blockquote {
-
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.06) 30%, rgba(255, 255, 255, 1) 100%);
             box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.9),
                         inset -2px -2px 2px 1px rgba(255, 255, 255, 0.05), 0 4px 10px 0 rgba(0, 0, 0, 0.1),
                         0 0 80px rgba(0, 0, 0, 0.08);
@@ -694,10 +694,15 @@ h3 {
 
             .h2-container {
                 position: absolute;
-                margin: -6rem 0 5rem 0rem;
+                margin: -6rem 0 5rem 0;
+                width: 100%;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 z-index: 10005;
                 @media screen and (min-width: 980px) {
-                    margin: -13rem 0 5rem -2rem;
+                    margin: -13rem 0 5rem 0;
                 }
             }
 
@@ -707,7 +712,7 @@ h3 {
 
                 background: rgba(255, 255, 255, 0.1);
                 box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.5),
-                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
                 color: rgba(255, 255, 255, 0.85);
                 backdrop-filter: blur(4px);
                 backdrop-filter: url(#filter);
@@ -719,6 +724,7 @@ h3 {
                 text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
                 font-weight: 700;
                 text-align: center;
+                margin: 0 auto;
 
                 @media screen and (min-width: 980px) {
                     font-size: 2rem;

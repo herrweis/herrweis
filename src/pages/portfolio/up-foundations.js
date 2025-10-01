@@ -46,12 +46,12 @@ export default function Page() {
         </div>
 
         <div className="media-full-width padding-bottom">
-            <VideoComponent src="/images/videos/up/navigation.mp4" poster={NavigationPoster.src} />
+            <VideoComponent sources={[{ src: "/images/videos/up/navigation.mp4", type: "video/mp4" }]} poster={NavigationPoster.src} />
             <p className="overlap">Up&apos;s navigation moves away from the conventional bottom drawer layout, offering a more fluid, gesture-based approach. Users can swipe to move between different sections, making the app easy to use and efficient. The navigation labels are integrated into the page titles, keeping the interface clean and saving screen space. With no cumbersome screen transitions or loading delays, the app offers a smooth and seamless experience, allowing users to manage their finances effortlessly while maximizing screen usability.</p>
         </div>
 
         <div className="media-full-width">
-            <VideoComponent src="/images/videos/up/signup.mp4" poster={SignupPoster.src} />
+            <VideoComponent sources={[{ src: "/images/videos/up/signup.mp4", type: "video/mp4" }]} poster={SignupPoster.src} />
             <p className="overlap">↑ Realtime onboarding of customer number 17</p>
         </div>
 
