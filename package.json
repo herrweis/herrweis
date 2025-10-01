@@ -25,6 +25,7 @@
     "react": "^19.1.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^19.1.0",
+    "react-scroll-parallax": "^3.5.0",
     "react-tabs": "^6.1.0",
     "sass": "^1.89.2"
   },

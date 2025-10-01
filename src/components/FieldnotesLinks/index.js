@@ -8,6 +8,12 @@ const FieldnotesLinks = () => {
 
     const Navigation = [
         {
+            to: "/fieldnotes/we-are-drowning-in-the-shallow-end",
+            label: "We are drowning in the shallow end",
+            type: "essay",
+            length: "8–9"
+        },
+        {
             to: "/fieldnotes/why-measuring-design-ROI-kills-the-work-that-matters-most",
             label: "Why measuring design ROI kills the work that matters most",
             type: "essay",

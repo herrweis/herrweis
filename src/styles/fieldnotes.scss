@@ -474,3 +474,253 @@ h3 {
         }
     }
 }
+
+.shallow {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    .work-navigation {
+        position: absolute;
+        z-index: 10000;
+        width: 100%;
+        color: var(--backgroundColor);
+
+        a .logo {
+            background-color: transparent
+        }
+
+        a:hover {
+            background-color: transparent
+        }
+
+        .logo path {
+            stroke: var(--backgroundColor);
+        }
+    }
+
+    .text-content {
+        padding: 0 0.5rem;
+        max-width: 1600px;
+        margin: 0 auto;
+
+        @media screen and (min-width: 980px) {
+            padding: 0 4rem;
+        }          
+    }
+
+    .intro {
+        max-width: 4000px;
+        position: relative;
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+
+        .h1-container {
+            z-index: 10004;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            display: block;
+            margin-top: -4rem;
+
+            span {
+                line-height: 1;
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.5),
+                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                color: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(3px);
+                backdrop-filter: url(#filter);
+                -webkit-backdrop-filter: blur(3px);
+                display: inline-block;
+                // width: 75%;
+                box-sizing: border-box;
+                font-size: 1rem;
+                padding: 1.5rem 2rem;
+                border-radius: 10.2vmin 9.8vmin 10.2vmin 9.8vmin;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 980px) {
+            .video-container {
+                padding-bottom: 0;
+            }
+
+            h1 {
+                margin-top: -0;
+            }
+
+            h1 span {
+                font-size: 1.75rem;
+            }
+        }
+
+        .header-content{
+            position: relative;
+            z-index: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: -4.5rem;
+            position: relative;
+            z-index: 0;
+            line-height: 1.4;
+            max-width: 30rem;
+            margin: -4.5rem auto 0 auto;
+
+            &::first-letter {
+                font-size: 3.65rem;
+                font-weight: 800;
+                float: left;
+                line-height: 0.9;
+                margin: 0 0.2rem 0 0;
+            }
+        }
+    }
+    
+    .body-copy {
+        max-width: 30rem;
+
+        p {
+            font-size: 0.75rem;
+            max-width: 30rem;
+            line-height: 1.4;
+            margin: 1.5rem 0;
+        }
+
+        blockquote {
+
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 1) 100%);
+            box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.9),
+                        inset -2px -2px 2px 1px rgba(255, 255, 255, 0.05), 0 4px 10px 0 rgba(0, 0, 0, 0.1),
+                        0 0 80px rgba(0, 0, 0, 0.08);
+            color: rgba(0, 0, 0, 1);
+            backdrop-filter: blur(3px);
+            backdrop-filter: url(#filter);
+            -webkit-backdrop-filter: blur(3px);
+            display: inline-block;
+            box-sizing: border-box;
+            font-size: 1.75rem;
+            padding: 1rem 1.2rem;
+            border-radius: 5.2vmin 4.8vmin 5.2vmin 4.8vmin;
+
+            h3 {
+                font-size: 1rem;
+                margin: 0;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+            }
+
+            p {
+                margin: 0 0 1.5rem 0;
+                font-size: 1rem;
+                line-height: 1;
+            }
+
+            .options {
+                display: flex;
+                gap: 0.5rem;
+                width: 100%;
+            }
+            
+            .primary,
+            .secondary {
+                border-radius: 50rem;
+                font-size: 1rem;
+                background-color: rgba(220, 220, 228, 0.9);
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0.2rem;
+            }
+
+            .primary {
+                background-color: #0088FF;
+                color: var(--backgroundColor);
+            }
+
+            @media screen and (min-width: 980px) {
+                float: left;
+                margin: 0.3rem 1rem 1rem -3rem;
+                width: 51%;
+            }
+        }
+    }
+
+    .gradient-background {
+      background-size: 100%;  
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 0;
+
+      section p:last-child {
+          position: relative;
+          margin-bottom: -1px;
+          z-index: 10004;
+      }
+    }
+
+    .bottom-gradient {
+        background: linear-gradient(180deg, rgba(0, 131, 181, 1) 0%, rgba(23, 53, 73, 1) 60%);
+
+        section {
+            color: var(--backgroundColor);
+            padding-top: 1px;
+            padding-bottom: 10rem;
+            margin-top: -2px;
+            position: relative;
+
+            p:last-child {
+                margin: 5rem 0;
+            }
+
+            .h2-container {
+                position: absolute;
+                margin: -6rem 0 5rem 0rem;
+                z-index: 10005;
+                @media screen and (min-width: 980px) {
+                    margin: -13rem 0 5rem -2rem;
+                }
+            }
+
+            h2 {
+                font-size: 1rem;
+                line-height: 1;
+
+                background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.5),
+                            inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+                color: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(3px);
+                backdrop-filter: url(#filter);
+                -webkit-backdrop-filter: blur(3px);
+                display: inline-block;
+                box-sizing: border-box;
+                padding: 1.5rem 2rem;
+                border-radius: 10.2vmin 9.8vmin 10.2vmin 9.8vmin;
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                font-weight: 700;
+                text-align: center;
+
+                @media screen and (min-width: 980px) {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
