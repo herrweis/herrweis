@@ -9,6 +9,7 @@ import Image from 'next/image'
 import ImageHeaderPoster from "../../../public/images/fieldnotes/shallow/header_poster.jpg"
 import ImageGradientPoster from "../../../public/images/fieldnotes/shallow/gradient_poster.jpg"
 import ImageGradientBackground from "../../../public/images/fieldnotes/shallow/gradient.svg"
+import ImageOG from "../../../public/images/og/shallow.jpg"
 
 
 export default function Page() {
@@ -17,11 +18,14 @@ export default function Page() {
     <main className="fieldnote shallow">
         <Head>
             <title>We are drowning in the shallow end</title>
-            <meta name="description" content=""/>
-            <meta name="og:description" content=""/>
-            <meta property="og:image" content="" />
-            <meta property="og:image:width" content="1980" />
-            <meta property="og:image:height" content="1080" />
+            <meta name="og:title" content="We are drowning in the shallow end"/>
+            <meta name="description" content="Ship faster. Add AI to everything. Be the first mover. This mantra is drowning us in shallow work. Why depth, not speed, creates sustainable progress."/>
+            <meta name="og:description" content="Ship faster. Add AI to everything. Be the first mover. This mantra is drowning us in shallow work. Why depth, not speed, creates sustainable progress."/>
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="https://andreasweis.com/fieldnotes/we-are-drowning-in-the-shallow-end" />
+            <meta property="og:image" content={ImageOG.src} />
+            <meta property="og:image:width" content="1200" />
+            <meta property="og:image:height" content="630" />
         </Head>
         <div className="work-navigation">
            <Logo />
