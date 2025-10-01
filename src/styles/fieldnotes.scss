@@ -597,10 +597,13 @@ h3 {
         max-width: 30rem;
 
         p {
-            font-size: 0.75rem;
             max-width: 30rem;
             line-height: 1.4;
             margin: 1.5rem 0;
+
+            @media screen and (min-width: 980px) {
+                font-size: 0.75rem;
+            }
         }
 
         blockquote {
