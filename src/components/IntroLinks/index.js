@@ -1,14 +1,5 @@
-import React, { useState, useEffect } from "react"
-
 const IntroLinks = () => {
-    const [availability, setAvailability] = useState("Checking availability...");
-
-    useEffect(() => {
-        fetch('/availability.json')
-            .then(res => res.json())
-            .then(data => setAvailability(data.message))
-            .catch(() => setAvailability("Limited availability — get in touch"));
-    }, []);
+    const availability = process.env.NEXT_PUBLIC_AVAILABILITY || "Limited availability — get in touch";
 
     return (
         <div>
