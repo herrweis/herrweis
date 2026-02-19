@@ -175,7 +175,7 @@ export default function Page() {
           <div className="hero-title">
             <h1>
               <span>Andi Weis</span>
-              <span>Design&amp;Product</span>
+              <span>Design<br className="mobile-break" />&amp;Product</span>
               <span>Strategist</span>
               <span>Provocateur</span>
             </h1>
