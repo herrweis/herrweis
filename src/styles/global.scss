@@ -362,7 +362,7 @@ body {
 
 .fractional-question {
   grid-column: 1 / span 4;
-  margin: 7rem 0 0;
+  margin: 12rem 0 0;
   font-style: italic;
   font-weight: 600;
   font-size: clamp(1.5rem, 3.3vw, 2.7rem);
@@ -371,9 +371,9 @@ body {
 }
 
 .fractional-answer {
-  grid-column: 5 / span 4;
+  grid-column: 5 / span 3;
   align-self: end;
-  margin: 7rem 0 7rem 0;
+  margin: 12rem 0 7rem 0;
   font-size: 0.75rem;
   line-height: 1.6;
 }
@@ -681,15 +681,15 @@ body {
     grid-column: 1 / -1;
   }
 
-  .proof-title-break {
-    display: none;
-  }
+  // .proof-title-break {
+  //   display: none;
+  // }
 }
 
 @media (max-width: 760px) {
-  :root {
-    --defaultFontSize: 22px;
-  }
+  // :root {
+  //   --defaultFontSize: 26px;
+  // }
 
   .home-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -735,6 +735,28 @@ body {
     grid-column: 1 / -1;
   }
 
+  .session-label {
+    font-size: 0.8rem;
+  }
+  
+  .section-kicker,
+  .session-header {
+    font-size: 0.8rem;
+  }
+
+  .session-summary {
+    font-size: 0.8rem;
+  }
+
+  .session-details {
+    font-size: 0.8rem;
+  }
+
+  .session-details-key {
+    font-size: 0.75rem;
+    white-space: wrap;
+  }
+
   .session-row-inner {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -754,21 +776,49 @@ body {
     grid-column: 1 / -1;
   }
 
+  .notes-header {
+    font-size: 0.75rem;
+  }
+
+  .fractional-copy p {
+    text-align: left;
+    font-size: 1rem;
+
+    & + p {
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
   .fractional-title {
-    font-size: clamp(2.2rem, 16vw, 4rem);
+    font-size: clamp(2.2rem, 24vw, 7rem);
+    text-align: left;
+    order: -1;
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+  }
+
+  .fractional-copy {
+    grid-column: 1 / -1;
   }
 
   .fractional-question {
     margin-top: 3rem;
+    text-align: left;
+    grid-column: 1 / -1;
   }
 
   .fractional-answer {
-    margin: 3rem 0;
+    margin: 0 0 3rem 0;
+    font-size: 1rem;
+    grid-column: 1 / -1;
   }
 
   .proof-title {
     grid-column: 1 / -1;
-    padding: 2rem 0 1rem 0;
+    padding: 2rem 0.5rem 1rem 0.5rem;
+    text-align: left;
+    font-size: clamp(4rem, 12vw, 12rem);
   }
 
   .proof-slider {
@@ -786,13 +836,17 @@ body {
     font-size: clamp(1.2rem, 6vw, 2rem);
   }
 
-  .proof-title-break {
-    display: none;
-  }
+  // .proof-title-break {
+  //   display: none;
+  // }
 
   .cta-link:first-of-type,
   .cta-link:last-of-type {
     grid-column: 1 / -1;
+  }
+
+  .cta-label {
+    font-size: 0.75rem;
   }
 
   .home-cta h2 {
