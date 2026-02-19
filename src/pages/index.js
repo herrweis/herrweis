@@ -83,7 +83,7 @@ const testimonials = [
   }
 ]
 
-const brandList = "\u2003\u2003Up\u2003\u2003|\u2003\u2003Lyrebird Health\u2003\u2003|\u2003\u2003Bendigo Bank\u2003\u2003|\u2003\u2003University of Melbourne\u2003\u2003|\u2003\u2003Kmart\u2003\u2003|\u2003\u2003Med Angels\u2003\u2003|\u2003\u2003eSignatures\u2003\u2003|\u2003\u2003Mental Gravity\u2003\u2003"
+const brandList = "\u2003\u2003Up\u2003\u2003|\u2003\u2003Lyrebird Health\u2003\u2003|\u2003\u2003Bendigo Bank\u2003\u2003|\u2003\u2003University of Melbourne\u2003\u2003|\u2003\u2003Kmart\u2003\u2003|\u2003\u2003Med Angels\u2003\u2003|\u2003\u2003eSignatures\u2003\u2003|\u2003\u2003Sonic Leadership Group\u2003\u2003"
 
 export default function Page() {
   const sectionRefs = useRef([])
@@ -182,7 +182,7 @@ export default function Page() {
           </div>
           <div className="hero-note">
             <p>I help founders and teams get clear on what matters and then make it real.</p>
-            <p>Across design, product, and story.</p>
+            <p>Across design, product and story.</p>
           </div>
           <div className="hero-logo">
             <Logo />

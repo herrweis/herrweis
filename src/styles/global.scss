@@ -188,11 +188,13 @@ body {
 }
 
 .session-header {
-  grid-column: 1 / span 4;
+  grid-column: 1 / span 5;
   margin: 0;
+  font-size: 3rem;
   font-weight: 700;
-  font-size: 0.55rem;
-  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -3;
+  line-height: 0.8;
 }
 
 .session-list {
@@ -741,11 +743,14 @@ body {
   
   .section-kicker,
   .session-header {
-    font-size: 0.8rem;
+    font-size: 2rem;
+  }
+  .section-kicker {
+    font-size: 1rem;
   }
 
   .session-summary {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .session-details {
