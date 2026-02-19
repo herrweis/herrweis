@@ -74,12 +74,12 @@ const testimonials = [
     attribution: "Dr Lachlan Kent, founder of Mental Gravity"
   },
   {
-    quote: "\u201CI thought we were getting PowerPoint slides. We received a lesson in how effective design drives leading comms.\u201D",
-    attribution: "Sam Miller, Bendigo Bank"
+    quote: "\u201CWhat Andi provided was far greater than just product. His thinking goes across the whole business, from brand to organisational structure to culture.\u201D",
+    attribution: "David Cain, co-founder of Occubuy"
   },
   {
-    quote: "\u201CWhat Andi provided was far greater than just product. Product was probably the smallest part of how he impacted us. His thinking goes across the whole business, from brand to organisational structure to culture.\u201D",
-    attribution: "David Cain, co-founder of Occubuy"
+    quote: "\u201CI thought we were getting PowerPoint slides. We received a lesson in how effective design drives leading comms and set a standard amongst bank reporting\u201D",
+    attribution: "Sam Miller, General Manager of Investor Relations and ESG Bendigo Bank"
   }
 ]
 
@@ -89,7 +89,7 @@ export default function Page() {
   const sectionRefs = useRef([])
   const [openSession, setOpenSession] = useState(null)
   const [activeQuote, setActiveQuote] = useState(0)
-  const [slideDirection, setSlideDirection] = useState("next")
+  const [autoAdvance, setAutoAdvance] = useState(true)
 
   useEffect(() => {
     const root = document.documentElement
@@ -149,12 +149,12 @@ export default function Page() {
   }, [])
 
   useEffect(() => {
+    if (!autoAdvance) return
     const timer = setInterval(() => {
-      setSlideDirection("next")
       setActiveQuote((prev) => (prev + 1) % testimonials.length)
     }, 20000)
     return () => clearInterval(timer)
-  }, [])
+  }, [autoAdvance])
 
   const setSectionRef = (element, index) => {
     sectionRefs.current[index] = element
@@ -277,32 +277,44 @@ export default function Page() {
 
       <section className="home-section home-section-dark home-proof" data-theme="dark" ref={(element) => setSectionRef(element, 4)}>
         <div className="home-grid">
+          <h2 className="proof-title">
+            In<br className="proof-title-break" />
+            their<br className="proof-title-break" />
+            words
+          </h2>
           <div className="proof-slider">
-            <button
-              className="proof-arrow proof-arrow--prev"
-              onClick={() => { setSlideDirection("prev"); setActiveQuote((prev) => (prev - 1 + testimonials.length) % testimonials.length) }}
-              aria-label="Previous quote"
-            >
-              &#x2039;
-            </button>
-            <div className="proof-quotes" data-direction={slideDirection}>
-              {testimonials.map((item, index) => (
-                <div
-                  className={`proof-quote ${index === activeQuote ? "proof-quote--active" : ""}`}
-                  key={item.attribution}
-                >
-                  <blockquote>{item.quote}</blockquote>
-                  <p className="proof-attribution">&mdash;&mdash; {item.attribution}</p>
-                </div>
-              ))}
+            <div className="proof-quotes">
+              <div
+                className="proof-quotes-track"
+                style={{ transform: `translateX(-${activeQuote * 100}%)` }}
+              >
+                {testimonials.map((item, index) => (
+                  <div
+                    className="proof-quote"
+                    key={item.attribution}
+                  >
+                    <blockquote>{item.quote}</blockquote>
+                    <p className="proof-attribution">&mdash;&mdash; {item.attribution}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <button
-              className="proof-arrow proof-arrow--next"
-              onClick={() => { setSlideDirection("next"); setActiveQuote((prev) => (prev + 1) % testimonials.length) }}
-              aria-label="Next quote"
-            >
-              &#x203A;
-            </button>
+            <div className="proof-arrows">
+              <button
+                className="proof-arrow proof-arrow--prev"
+                onClick={() => { setAutoAdvance(false); setActiveQuote((prev) => (prev - 1 + testimonials.length) % testimonials.length) }}
+                aria-label="Previous quote"
+              >
+                &#x2039;
+              </button>
+              <button
+                className="proof-arrow proof-arrow--next"
+                onClick={() => { setAutoAdvance(false); setActiveQuote((prev) => (prev + 1) % testimonials.length) }}
+                aria-label="Next quote"
+              >
+                &#x203A;
+              </button>
+            </div>
           </div>
           <div className="proof-ticker">
             <div className="proof-ticker-track">
@@ -313,7 +325,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="home-section home-section-dark home-cta" data-theme="dark" ref={(element) => setSectionRef(element, 5)}>
+      <section className="home-section home-section-light home-cta" data-theme="light" ref={(element) => setSectionRef(element, 5)}>
         <div className="home-grid">
           <h2>Every engagement starts with a conversation.</h2>
           <div className="cta-link">

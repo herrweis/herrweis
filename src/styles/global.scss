@@ -464,12 +464,51 @@ body {
   }
 }
 
+.proof-title {
+  grid-column: 1 / span 3;
+  font-size: clamp(3rem, 8vw, 8rem);
+  font-weight: 700;
+  line-height: 0.85;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: -0.02em;
+  margin: 0;
+  padding: 4rem 0 8rem 0;
+  align-self: start;
+}
+
 .proof-slider {
-  grid-column: 2 / span 6;
+  grid-column: 4 / span 4;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 2rem;
   padding: 4rem 0 8rem 0;
+}
+
+.proof-quotes {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.proof-quotes-track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proof-quote {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.proof-arrows {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .proof-arrow {
@@ -480,7 +519,7 @@ body {
   font-size: 2.5rem;
   cursor: pointer;
   transition: opacity 0.2s;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   line-height: 1;
 
   &:hover {
@@ -488,53 +527,26 @@ body {
   }
 }
 
-.proof-quotes {
-  flex: 1;
-  position: relative;
-  min-height: 10rem;
-}
-
-.proof-quote {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  filter: blur(6px);
-  transform: translateY(2rem);
-  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  pointer-events: none;
-}
-
-[data-direction="prev"] .proof-quote {
-  transform: translateY(-2rem);
-}
-
-.proof-quote--active {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
 .proof-quote blockquote {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 .proof-attribution {
-  margin: 0.8rem 0 0;
-  font-size: 0.6rem;
-  opacity: 0.7;
+  margin: 1.5rem 0 0;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  opacity: 0.6;
+  font-weight: 400;
 }
 
 .proof-ticker {
   grid-column: 1 / -1;
   overflow: hidden;
   white-space: nowrap;
+  margin-bottom: 8rem;
 }
 
 .proof-ticker-track {
@@ -661,8 +673,16 @@ body {
     grid-column: 7 / span 2;
   }
 
+  .proof-title {
+    grid-column: 1 / -1;
+  }
+
   .proof-slider {
     grid-column: 1 / -1;
+  }
+
+  .proof-title-break {
+    display: none;
   }
 }
 
@@ -746,6 +766,11 @@ body {
     margin: 3rem 0;
   }
 
+  .proof-title {
+    grid-column: 1 / -1;
+    padding: 2rem 0 1rem 0;
+  }
+
   .proof-slider {
     grid-column: 1 / -1;
     gap: 1rem;
@@ -759,6 +784,10 @@ body {
 
   .proof-ticker-track {
     font-size: clamp(1.2rem, 6vw, 2rem);
+  }
+
+  .proof-title-break {
+    display: none;
   }
 
   .cta-link:first-of-type,
