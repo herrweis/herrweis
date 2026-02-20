@@ -71,11 +71,15 @@ const fieldNotes = [
 const testimonials = [
   {
     quote: "\u201CHe\u2019s not susceptible to bullshit. He calls it out in a nanosecond. There is no flattery and nothing artificial in his approach. You know when he says something, he means it.\u201D",
-    attribution: "Dr Lachlan Kent, founder of Mental Gravity"
+    attribution: "Dr Lachlan Kent, Founder of Mental Gravity"
   },
   {
     quote: "\u201CWhat Andi provided was far greater than just product. His thinking goes across the whole business, from brand to organisational structure to culture.\u201D",
-    attribution: "David Cain, co-founder of Occubuy"
+    attribution: "David Cain, Co-founder of Occubuy"
+  },
+  {
+    quote: "\u201CAndi's approach is beautifully pure. Deep curiosity, honest and caring conversations, then focused actions that create real impact, not just another to-do list.\u201D",
+    attribution: "Nick Carter, Founder of Sonic Leadership Group"
   },
   {
     quote: "\u201CI thought we were getting PowerPoint slides. We received a lesson in how effective design drives leading comms and set a standard amongst bank reporting\u201D",
