@@ -35,7 +35,7 @@ const founderSessions = [
     ]
   },
   {
-    label: "05 | Narrative",
+    label: "03 | Narrative",
     title: "No one understands what we do",
     summary: "Half day session + written narrative outline. I make you explain your business in ways you have not tried before until we find the version that actually lands.",
     details: [
