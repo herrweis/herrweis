@@ -83,7 +83,7 @@ const testimonials = [
   }
 ]
 
-const brandList = "\u2003\u2003Up\u2003\u2003|\u2003\u2003Lyrebird Health\u2003\u2003|\u2003\u2003Bendigo Bank\u2003\u2003|\u2003\u2003University of Melbourne\u2003\u2003|\u2003\u2003Kmart\u2003\u2003|\u2003\u2003Med Angels\u2003\u2003|\u2003\u2003eSignatures\u2003\u2003|\u2003\u2003Sonic Leadership Group\u2003\u2003"
+const brandList = "\u2003\u2003Up\u2003\u2003|\u2003\u2003Lyrebird Health\u2003\u2003|\u2003\u2003Bendigo Bank\u2003\u2003|\u2003\u2003University of Melbourne\u2003\u2003|\u2003\u2003Kmart\u2003\u2003|\u2003\u2003Australian Medical Angels\u2003\u2003|\u2003\u2003eSignatures\u2003\u2003|\u2003\u2003Sonic Leadership Group\u2003\u2003"
 
 export default function Page() {
   const sectionRefs = useRef([])
