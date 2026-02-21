@@ -713,7 +713,7 @@ body {
   }
 
   .hero-title h1 {
-    font-size: clamp(2.3rem, 12vw, 4rem);
+    font-size: clamp(3.3rem, 12vw, 4rem);
   }
 
   .hero-note {
@@ -744,6 +744,7 @@ body {
   .section-kicker,
   .session-header {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   .section-kicker {
     font-size: 1rem;
@@ -751,6 +752,7 @@ body {
 
   .session-summary {
     font-size: 1rem;
+    margin: 1rem 0;
   }
 
   .session-details {
