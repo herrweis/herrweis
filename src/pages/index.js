@@ -74,7 +74,7 @@ const testimonials = [
     attribution: "Dr Lachlan Kent, Founder of Mental Gravity"
   },
   {
-    quote: "\u201CWhat Andi provided was far greater than just product. His thinking goes across the whole business, from brand to organisational structure to culture.\u201D",
+    quote: "\u201CWe set one metric and goal which was smacked out of the park. 200% increase over a month period after Andi had supported us in a rejuvenation, not even a full redesign.\u201D",
     attribution: "David Cain, Co-founder of Occubuy"
   },
   {
@@ -168,8 +168,8 @@ export default function Page() {
     <div className="home-v2">
       <Head>
         <title>Andreas Weis | Product Design Leadership</title>
-        <meta name="description" content="Design leader with 23+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
-        <meta name="og:description" content="Design leader with 23+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
+        <meta name="description" content="Design leader with 243+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
+        <meta name="og:description" content="Design leader with 24+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
         <meta property="og:image" content={ImageOG.src} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
