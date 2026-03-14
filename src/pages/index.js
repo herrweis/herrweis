@@ -168,23 +168,33 @@ export default function Page() {
       root.style.setProperty("--backgroundColor", next.background)
     }
 
+    // Track which sections are currently intersecting and their ratios
+    const visibleSections = new Map()
+
     const observer = new IntersectionObserver(
       (entries) => {
-        let bestEntry = null
         for (const entry of entries) {
-          if (!entry.isIntersecting) {
-            continue
-          }
-          if (!bestEntry || entry.intersectionRatio > bestEntry.intersectionRatio) {
-            bestEntry = entry
+          if (entry.isIntersecting) {
+            visibleSections.set(entry.target, entry.intersectionRatio)
+          } else {
+            visibleSections.delete(entry.target)
           }
         }
-        if (bestEntry?.target?.dataset?.theme) {
-          applyTheme(bestEntry.target.dataset.theme)
+        // Pick the section with the highest intersection ratio across ALL visible sections
+        let bestTarget = null
+        let bestRatio = 0
+        for (const [target, ratio] of visibleSections) {
+          if (ratio > bestRatio) {
+            bestRatio = ratio
+            bestTarget = target
+          }
+        }
+        if (bestTarget?.dataset?.theme) {
+          applyTheme(bestTarget.dataset.theme)
         }
       },
       {
-        threshold: [0.5, 0.65, 0.8]
+        threshold: [0.05, 0.1, 0.2, 0.3, 0.5, 0.65, 0.8]
       }
     )
 
