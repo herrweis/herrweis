@@ -3,7 +3,54 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import Logo from "../components/Logo"
+import ProjectSlideshow from "../components/ProjectSlideshow"
 import ImageOG from "../../public/images/og/home.png"
+
+const projectWorks = [
+  {
+    quote: "\u201CI have spent over ten years researching how gravity affects the mind. I think I need an app.\u201D",
+    attribution: "Mental Gravity",
+    tags: "Product leadership \u00B7 Brand identity \u00B7 Visual language \u00B7 Generative pattern system \u00B7 Product design \u00B7 Website design and development",
+    basePath: "/images/work2026/MG",
+    slides: [
+      { type: "image", name: "01logo" },
+      { type: "image", name: "02phone" },
+      { type: "video", name: "03fieldloop", duration: 7000 },
+      { type: "image", name: "04screens" },
+      { type: "image", name: "05end" },
+      { type: "image", name: "06web" },
+    ]
+  },
+  {
+    quote: "\u201CI think I need a logo and a website for my new consultancy\u201D",
+    attribution: "Sonic Leadership Group",
+    tags: "Positioning \u00B7 Tone of voice \u00B7 Brand identity \u00B7 Copywriting \u00B7 Website design and development \u00B7 Business collateral",
+    basePath: "/images/work2026/SLG",
+    slides: [
+      { type: "image", name: "01logo" },
+      { type: "image", name: "09mockup" },
+      { type: "image", name: "03businesscard" },
+      { type: "video", name: "04circles", duration: 7000 },
+      { type: "image", name: "05screen1" },
+      { type: "image", name: "06shirt" },
+      { type: "video", name: "02webscroll", duration: 12000 },
+      { type: "image", name: "07brand" },
+      { type: "image", name: "08screen2" },
+    ]
+  },
+  {
+    quote: "\u201CWe need a pitch deck\u201D",
+    attribution: "Australian Medical Angels",
+    tags: "Narrative strategy \u00B7 Investment thesis \u00B7 Visual communications",
+    basePath: "/images/work2026/MedAngels",
+    slides: [
+      { type: "image", name: "01screen" },
+      { type: "image", name: "02screen" },
+      { type: "image", name: "03screen" },
+      { type: "image", name: "04narrative" },
+    ]
+  }
+]
 
 const founderSessions = [
   {
@@ -80,6 +127,10 @@ const testimonials = [
   {
     quote: "\u201CAndi's approach is beautifully pure. Deep curiosity, honest and caring conversations, then focused actions that create real impact, not just another to-do list.\u201D",
     attribution: "Nick Carter, Founder of Sonic Leadership Group"
+  },
+  {
+    quote: "\u201CStorytelling extraordinaire.\u201D",
+    attribution: "Australian Medical Angels"
   },
   {
     quote: "\u201CI thought we were getting PowerPoint slides. We received a lesson in how effective design drives leading comms and set a standard amongst bank reporting\u201D",
@@ -252,6 +303,22 @@ export default function Page() {
             </p>
           </div>
           <h2 className="fractional-title">Fract<br/>ional<br/>Work</h2>
+        </div>
+      </section>
+
+      <section className="home-section home-section-dark home-projects" data-theme="dark" ref={(element) => setSectionRef(element, 3)}>
+        <div className="home-grid">
+          <h2 className="projects-title">Project Work</h2>
+          {projectWorks.map((project) => (
+            <article className="project-item" key={project.attribution}>
+              <div className="project-header">
+                <p className="project-quote">{project.quote}</p>
+                <p className="project-attribution">{project.attribution}</p>
+              </div>
+              <ProjectSlideshow slides={project.slides} basePath={project.basePath} />
+              <p className="project-tags">{project.tags}</p>
+            </article>
+          ))}
           <p className="fractional-question">Not sure if or what kind of design help you need?</p>
           <p className="fractional-answer">
             I start with a short assessment. I look at your product, team, roadmap and constraints, and give
@@ -261,7 +328,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="home-section home-section-light home-notes" data-theme="light" ref={(element) => setSectionRef(element, 3)}>
+      <section className="home-section home-section-light home-notes" data-theme="light" ref={(element) => setSectionRef(element, 4)}>
         <div className="home-grid">
           <p className="notes-header">Essays</p>
           <div className="section-kicker">
@@ -279,7 +346,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="home-section home-section-dark home-proof" data-theme="dark" ref={(element) => setSectionRef(element, 4)}>
+      <section className="home-section home-section-dark home-proof" data-theme="dark" ref={(element) => setSectionRef(element, 5)}>
         <div className="home-grid">
           <h2 className="proof-title">
             In<br className="proof-title-break" />
@@ -329,7 +396,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="home-section home-section-light home-cta" data-theme="light" ref={(element) => setSectionRef(element, 5)}>
+      <section className="home-section home-section-light home-cta" data-theme="light" ref={(element) => setSectionRef(element, 6)}>
         <div className="home-grid">
           <h2>Every engagement starts with a conversation.</h2>
           <div className="cta-link">
