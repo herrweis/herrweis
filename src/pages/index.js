@@ -216,7 +216,7 @@ export default function Page() {
   }
 
   return (
-    <div className="home-v2">
+    <main className="home-v2">
       <Head>
         <title>Andreas Weis | Product Design Leadership</title>
         <meta name="description" content="Design leader with 243+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
@@ -409,6 +409,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
