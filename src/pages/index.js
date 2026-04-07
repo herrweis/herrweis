@@ -229,7 +229,7 @@ export default function Page() {
     <main className="home-v2">
       <Head>
         <title>Andreas Weis | Product Design Leadership</title>
-        <meta name="description" content="Design leader with 243+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
+        <meta name="description" content="Design leader with 24+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
         <meta name="og:description" content="Design leader with 24+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams" />
         <meta property="og:image" content={ImageOG.src} />
         <meta property="og:image:width" content="1200" />

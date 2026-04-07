@@ -3,5 +3,5 @@ export default {
   author: {
     name: 'Andi Weis'
   },
-  description: `Design leader with 22+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams`
+  description: `Design leader with 24+ years experience as a multidisciplinary designer and 15+ years leading diverse design teams`
 }
