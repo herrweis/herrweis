@@ -246,7 +246,7 @@ export default function Page() {
             </h1>
           </div>
           <div className="hero-note">
-            <p>I help founders and teams get clear on what matters and then make it real.</p>
+            <p>I help business owners and teams get clear on what matters and then make it real.</p>
             <p>Across design, product and story.</p>
           </div>
           <div className="hero-logo">
@@ -255,50 +255,6 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="home-section home-section-light home-sessions" data-theme="light" ref={(element) => setSectionRef(element, 1)}>
-        <div className="home-grid">
-          <p className="session-header">Founder sessions</p>
-          <p className="section-kicker">
-            Most founders I sit down with tell me things are going well. Within 30 minutes they have said the thing out loud they have been avoiding.
-            <br /><br />
-            I ask the questions nobody else will.
-            <br />
-            And I will not leave you without an answer.
-          </p>
-          <div className="session-list">
-            {founderSessions.map((item, index) => {
-              const isOpen = openSession === index
-              return (
-                <article
-                  className={`session-row ${isOpen ? "session-row--open" : ""}`}
-                  key={item.title}
-                  onClick={() => setOpenSession(isOpen ? null : index)}
-                >
-                  <div className="session-row-header">
-                    <p className="session-label">{item.label}</p>
-                    <h2>{item.title}</h2>
-                    <p className="session-summary">{item.summary}</p>
-                  </div>
-                  <div className="session-row-body">
-                    <div className="session-row-inner">
-                      <table className="session-details">
-                        <tbody>
-                          {item.details.map((row) => (
-                            <tr key={row.key}>
-                              <td className="session-details-key">{row.key}</td>
-                              <td>{row.value}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </article>
-              )
-            })}
-          </div>
-        </div>
-      </section>
 
       <section className="home-section home-section-dark home-fractional" data-theme="dark" ref={(element) => setSectionRef(element, 2)}>
         <div className="home-grid">
